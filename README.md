@@ -1,3 +1,4 @@
 # AscentOfTheAlps
 death to all non-gamers
-allah wills it
+
+by allah thou shalt die of dysentry for your ignorance
