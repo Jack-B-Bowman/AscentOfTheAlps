@@ -23,7 +23,7 @@ public class AscentoftheAlps {
     int partynum = 0;
     int eatrate = 1;
     double eatfood;
-
+    int gin;
     /**
      *
      * @param args the command line arguments
