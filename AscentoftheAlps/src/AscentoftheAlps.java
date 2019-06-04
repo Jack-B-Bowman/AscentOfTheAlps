@@ -21,9 +21,8 @@ public class AscentoftheAlps {
     double food = 100;
     boolean haschef = false;
     int partynum = 0;
-    int eatrate = 1;
     double eatfood;
-    int gin;
+
     /**
      *
      * @param args the command line arguments
@@ -40,16 +39,20 @@ public class AscentoftheAlps {
                 disttraveled++;
                 //keep going until disstraveled has counted up to = distance
                 System.out.println(disttraveled);
-                if (disttraveled % 10 == 0) {
+                if (disttraveled % 24 == 0) {
                     //every 10 nth distance do a food operation
+
                     if (haschef = true) {
+                        eatfood = partynum - 1;
                         food = food - eatfood;
                         System.out.println("You have " + food + "units of food left");
-                        //calculaions differ if haschef = true
+                        //calculations differ if haschef = true (use 1 less food)
+
                     } else {
+                        eatfood = partynum;
                         food = food - eatfood;
                         System.out.println("You have " + food + "units of food left");
-                        // calculations differ if haschef = false
+                        // calculations differ if haschef = false (use default food)
                     }
                 }
 
