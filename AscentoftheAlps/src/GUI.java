@@ -64,7 +64,7 @@ public class GUI {
 		AnimationWindow.setBounds(0, 0, 785, 215);
 		AnimationWindow.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		
-		JPanel InvPanel = new JPanel();
+		InventoryPanel InvPanel = new InventoryPanel();
 		InvPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		InvPanel.setBounds(352, 336, 432, 387);
 		
