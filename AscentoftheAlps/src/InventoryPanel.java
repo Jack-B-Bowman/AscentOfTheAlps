@@ -10,17 +10,18 @@ public class InventoryPanel extends JPanel {
 		setBounds(0, 0, 785, 215);
 		setLayout(null);
 		
-		JLabel lblElephant = new JLabel("Elephant");
-		lblElephant.setBounds(677, 93, 46, 14);
-		add(lblElephant);
+		JLabel lblFood = new JLabel("food");
+		lblFood.setBounds(20, 10, 100, 15 );
+		add(lblFood);
+                lblFood.setVisible(true);
 		
-		JLabel lblBackground = new JLabel("Background");
-		lblBackground.setBounds(348, 57, 68, 14);
-		add(lblBackground);
+		JLabel LblMen = new JLabel("men");
+		LblMen.setBounds(20, 30, 100, 15);
+		add(LblMen);
 		
-		JLabel lblEvent = new JLabel("Event");
-		lblEvent.setBounds(67, 144, 46, 14);
-		add(lblEvent);
+		JLabel lblElephants = new JLabel("Elephants");
+		lblElephants.setBounds(20, 50, 100, 15);
+		add(lblElephants);
 		
 	}
 
