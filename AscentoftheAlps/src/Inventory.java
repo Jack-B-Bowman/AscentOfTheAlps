@@ -8,6 +8,17 @@
  *
  * @author 1mccubbinaid
  */
-public class Inventory {
+public class Inventory 
+{
+    private double foodSupply;
     
+    public double getfoodSupply ()
+    {
+        return foodSupply;
+    }
+    
+    public void setfoodSupply (double f)
+    {
+        foodSupply = f;
+    }
 }
