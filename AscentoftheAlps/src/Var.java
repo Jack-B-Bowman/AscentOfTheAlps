@@ -1,30 +1,21 @@
-<<<<<<< HEAD:AscentoftheAlps/src/party.java
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author 1mccubbinaid
- */
-public class party {
-    
-}
-=======
-/**
+ * @AUTHOR JACK
  *
  * @author Taylor Conn
  */
 public class Var 
 {
-    private double foodConsumption;
-    private double health;
-    private double distancePerDay;
-    private double chance;
-    private double tradeTyield;
+     static double foodConsumption = 2;
+     static double health;
+     static double distancePerDay = 20;
+     static double chance;
+     static double tradeTyield;
     
-    public double getfoodConsumption ()
+
+    
+    public double getFoodConsumption ()
     {
         return foodConsumption;
     }
@@ -36,7 +27,6 @@ public class Var
     
     public double distancePerDay() 
     {
-        return health;
+        return distancePerDay;
     }
 }
->>>>>>> b711bda433e7cae1ae3dd775ee6e9904106161b7:AscentoftheAlps/src/Var.java

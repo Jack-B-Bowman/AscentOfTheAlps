@@ -22,7 +22,7 @@ public class AscentoftheAlps {
     boolean haschef = false;
     int partynum = 0;
     double eatfood;
-    
+    Var v = new Var();
     /**
      *
      * @param args the command line arguments
@@ -32,51 +32,46 @@ public class AscentoftheAlps {
 
     public void day() {
 
-
-        if (stop = true) {
-            
-        } else {
-            while (disttraveled != distance) {
-                
-               
-
-                System.out.println(disttraveled);
-                
-                    if (haschef = true) {
-                        eatfood = partynum - 1;
-                        food = food - eatfood;
-                        System.out.println("You have " + food + "units of food left");
-                        //calculations differ if haschef = true (use 1 less food)
-
-                    } else {
-                        eatfood = partynum;
-                        food = food - eatfood;
-                        System.out.println("You have " + food + "units of food left");
-                        // calculations differ if haschef = false (use default food)
-                    }
-                
-
-                 
-
-                if (eventtrigger = true) {
-                    break;
+                    Inventory.foodSupply -= v.getFoodConsumption();
+                    Inventory.distance -= v.distancePerDay();
                     
-                    //travel forever until an event happens, then break out of the loop
-                }
-                if (stop = true) {
-                    break;
-                }
-            
-            
-            }
-
-        }
+//        if (stop = true) {
+//        } else {
+//            while (disttraveled != distance) {
+//
+//
+//
+//                System.out.println(disttraveled);
+//
+//                if (haschef = true) {
+//                    eatfood = partynum - 1;
+//                    food = food - eatfood;
+//                    System.out.println("You have " + food + "units of food left");
+//                    //calculations differ if haschef = true (use 1 less food)
+//
+//                } else {
+//                    eatfood = partynum;
+//                    food = food - eatfood;
+//                    System.out.println("You have " + food + "units of food left");
+//                    // calculations differ if haschef = false (use default food)
+//                }
+//
+//
+//
+//
+//                if (eventtrigger = true) {
+//                    break;
+//
+//                    //travel forever until an event happens, then break out of the loop
+//                }
+//                if (stop = true) {
+//                    break;
+//                }
+//
+//
+//            }
+//
+//        }
 
     }
-    
-   
-    
-    
-    }
-    
-
+}
