@@ -22,18 +22,19 @@ public class AscentoftheAlps {
     boolean haschef = false;
     int partynum = 0;
     double eatfood;
-    Var v = new Var();
+    
     /**
      *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        GUI.main(null);
     }
 
-    public void day() {
+    public static void day() {
 
-                    Inventory.foodSupply -= v.getFoodConsumption();
-                    Inventory.distance -= v.distancePerDay();
+                    Inventory.foodSupply -= Var.foodConsumption;
+                    Inventory.distance -= Var.distancePerDay;
                     
 //        if (stop = true) {
 //        } else {

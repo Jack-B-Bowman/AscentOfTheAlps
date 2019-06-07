@@ -85,7 +85,8 @@ public class GUI {
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnNewButton) {
                     invPanel.SetLblFood(Inventory.foodSupply.toString());
-
+                    
+                    AscentoftheAlps.day();
                 }
             }
         });
