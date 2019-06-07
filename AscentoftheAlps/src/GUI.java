@@ -80,13 +80,14 @@ public class GUI {
 
         final JButton btnNewButton = new JButton("Move");
         btnNewButton.setBounds(352, 270, 87, 23);
-        
+
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnNewButton) {
-                    invPanel.SetLblFood(Inventory.foodSupply.toString());
-                    
                     AscentoftheAlps.day();
+                    invPanel.SetLblFood(Inventory.foodSupply.toString());
+
+
                 }
             }
         });

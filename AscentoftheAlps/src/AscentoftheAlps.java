@@ -18,7 +18,6 @@ public class AscentoftheAlps {
     int disttraveled = 0;
     boolean eventtrigger = false;
     boolean stop = false;
-    double food = 100;
     boolean haschef = false;
     int partynum = 0;
     double eatfood;
@@ -34,7 +33,7 @@ public class AscentoftheAlps {
     public static void day() {
 
                     Inventory.foodSupply -= Var.foodConsumption;
-                    Inventory.distance -= Var.distancePerDay;
+                    Inventory.Distance -= Var.distancePerDay;
                     
 //        if (stop = true) {
 //        } else {
