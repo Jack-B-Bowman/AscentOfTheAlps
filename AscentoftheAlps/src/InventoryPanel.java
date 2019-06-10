@@ -4,12 +4,12 @@ import javax.swing.JLabel;
 
 public class InventoryPanel extends JPanel {
 
-    JLabel lblFood = new JLabel("batman:");
+    JLabel lblFood = new JLabel("Food:");
     JLabel lblMen = new JLabel("Men:");
     JLabel lblElephants = new JLabel("Elephants:");
     JLabel lblBullets = new JLabel("Bullets:");
     JLabel lblMedicine = new JLabel("Medicine:");
-    JLabel lblRepairkits = new JLabel("Repairkits:");
+    JLabel lblRepairkits = new JLabel("Repair Kits:");
     /**
      * Create the panel.
      */
@@ -37,8 +37,6 @@ public class InventoryPanel extends JPanel {
         
         lblRepairkits.setBounds(20, 110, 100, 15);
         add(lblRepairkits);
-        
-        SetLblBullets("SJAHDKJ");
     }
 
     public void SetLblFood(String s) {
@@ -61,6 +59,5 @@ public class InventoryPanel extends JPanel {
     }
     public void SetLblMedicine(String s) {
         lblMedicine.setText("Medicine: " + s);
-    }
-    
+    }   
 }
