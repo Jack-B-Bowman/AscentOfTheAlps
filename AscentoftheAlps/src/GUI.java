@@ -21,6 +21,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 public class GUI {
 
@@ -90,12 +91,7 @@ public class GUI {
         final JButton btnNewButton = new JButton("Move");
         btnNewButton.setBounds(352, 270, 87, 23);
 
-        final JDialog dialog = new JDialog();
-        dialog.setUndecorated(true);
-        JLabel label = new JLabel(new ImageIcon("/europe-map.png"));
-        dialog.add(label);
-        dialog.pack();
-        dialog.setVisible(false);
+
 
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
@@ -111,7 +107,9 @@ public class GUI {
         btnMap.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnMap) {
-                    dialog.setVisible(true);
+                    ImageIcon g = new ImageIcon("/europe-map.png");
+               JOptionPane.showMessageDialog(invPanel,null , "Map",JOptionPane.INFORMATION_MESSAGE,g );
+                            
                 }
             }
         });
