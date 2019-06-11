@@ -20,6 +20,7 @@ import javax.swing.Icon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JDialog;
 
 public class GUI {
 
@@ -74,20 +75,27 @@ public class GUI {
         JLabel lblNewLabel = new JLabel("Inventory");
         lblNewLabel.setBounds(352, 316, 87, 14);
         lblNewLabel.setLabelFor(invPanel);
-        
+
         final PlayerStats playerStats = new PlayerStats();
         playerStats.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
         playerStats.setBounds(352, 510, 432, 150);
-        
+
         JLabel lblPlayerStats = new JLabel("Player Stats");
         lblPlayerStats.setBounds(352, 490, 87, 14);
         lblPlayerStats.setLabelFor(playerStats);
 
-        JButton btnMap = new JButton("Map");
+        final JButton btnMap = new JButton("Map");
         btnMap.setBounds(352, 241, 87, 23);
 
         final JButton btnNewButton = new JButton("Move");
         btnNewButton.setBounds(352, 270, 87, 23);
+
+        final JDialog dialog = new JDialog();
+        dialog.setUndecorated(true);
+        JLabel label = new JLabel(new ImageIcon("/europe-map.png"));
+        dialog.add(label);
+        dialog.pack();
+        dialog.setVisible(false);
 
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
@@ -96,6 +104,14 @@ public class GUI {
                     invPanel.SetLblFood(Inventory.foodSupply.toString());
 
 
+                }
+            }
+        });
+
+        btnMap.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+                if (arg0.getSource() == btnMap) {
+                    dialog.setVisible(true);
                 }
             }
         });
