@@ -1,13 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author ww
+ * @author Taylor Conn
  */
 public class Var {
     static Double foodConsumption = 2.0;
     static Double distancePerDay = 2.0;
+    static Double clothingUsage = 2.0;
+    static Double tradeYeild = 1.5;
 }

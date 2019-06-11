@@ -69,24 +69,33 @@ public class GUI {
 
         final InventoryPanel invPanel = new InventoryPanel();
         invPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-        invPanel.setBounds(352, 336, 432, 387);
+        invPanel.setBounds(352, 336, 432, 150);
 
         JLabel lblNewLabel = new JLabel("Inventory");
         lblNewLabel.setBounds(352, 316, 87, 14);
         lblNewLabel.setLabelFor(invPanel);
+        
+        final PlayerStats playerStats = new PlayerStats();
+        playerStats.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+        playerStats.setBounds(352, 510, 432, 150);
+        
+        JLabel lblPlayerStats = new JLabel("Player Stats");
+        lblPlayerStats.setBounds(352, 490, 87, 14);
+        lblPlayerStats.setLabelFor(playerStats);
 
         JButton btnMap = new JButton("Map");
         btnMap.setBounds(352, 241, 87, 23);
 
         final JButton btnNewButton = new JButton("Move");
         btnNewButton.setBounds(352, 270, 87, 23);
-        
+
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnNewButton) {
-                    invPanel.SetLblFood(Inventory.foodSupply.toString());
-                    
                     AscentoftheAlps.day();
+                    invPanel.SetLblFood(Inventory.foodSupply.toString());
+
+
                 }
             }
         });
@@ -102,6 +111,9 @@ public class GUI {
         appWindow.getContentPane().add(lblNewLabel);
         appWindow.getContentPane().add(invPanel);
         invPanel.setLayout(null);
+        appWindow.getContentPane().add(lblPlayerStats);
+        appWindow.getContentPane().add(playerStats);
+        playerStats.setLayout(null);
         appWindow.getContentPane().add(btnNewButton);
         appWindow.getContentPane().add(btnMap);
         appWindow.getContentPane().add(btnLoad);
