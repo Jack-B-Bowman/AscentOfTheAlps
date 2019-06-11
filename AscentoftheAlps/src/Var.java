@@ -9,9 +9,9 @@ public class Var {
     static Double tradeYeild = 1.5;
     
     
-    public Double chef()
+    public void chef()
     {
-        return foodConsumption * 0.85;
+         foodConsumption * 0.85;
     }
     
     public Double elephantTamer ()
