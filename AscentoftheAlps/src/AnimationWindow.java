@@ -13,5 +13,5 @@ public class AnimationWindow extends JPanel {
             Background.setBounds(0,0,785,215);
             
 	}
-
+        
 }
