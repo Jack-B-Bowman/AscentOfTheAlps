@@ -14,13 +14,13 @@ import java.util.*;
  */
 public class AscentoftheAlps {
 
-    int distance = 2000;
-    int disttraveled = 0;
-    boolean eventtrigger = false;
-    boolean stop = false;
-    boolean haschef = false;
-    int partynum = 0;
-    double eatfood;
+    static double distance = 2000;
+    static int disttraveled = 0;
+    static boolean eventtrigger = false;
+    static boolean stop = false;
+    static boolean haschef = false;
+    static int partynum = 0;
+    static double eatfood;
     
     /**
      *
