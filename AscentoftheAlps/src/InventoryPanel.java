@@ -23,6 +23,7 @@ public class InventoryPanel extends JPanel {
         //JLabel lblElephants = new JLabel("Elephants");
         lblElephants.setBounds(20, 30, 100, 15);
         add(lblElephants);
+        
         //Aidcode
         lblBullets.setBounds(20, 50, 100, 15);
         add(lblBullets);
@@ -46,7 +47,7 @@ public class InventoryPanel extends JPanel {
         lblBullets.setText("Bullets: " + s);
     }
     public void SetLblRepairkits(String s) {
-        lblBullets.setText("Repair Kits: " + s);
+        lblRepairkits.setText("Repair Kits: " + s);
     }
     public void SetLblMedicine(String s) {
         lblMedicine.setText("Medicine: " + s);
