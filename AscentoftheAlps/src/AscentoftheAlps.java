@@ -34,5 +34,7 @@ public class AscentoftheAlps {
 
                     Inventory.foodSupply -= Var.foodConsumption;
                     Inventory.Distance -= Var.distancePerDay;
+                    Events.runEvents();
+                    
     }
 }

@@ -8,7 +8,7 @@ public class Events
     static Random actOfGod = new Random();
     static int chance = actOfGod.nextInt(50);
 
-    public void runEvents ()
+    public static void runEvents ()
     {
         switch(chance)
         {
