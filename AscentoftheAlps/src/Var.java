@@ -11,21 +11,21 @@ public class Var {
     
     public void chef()
     {
-         foodConsumption * 0.85;
+        foodConsumption = foodConsumption * 0.85;
     }
     
-    public Double elephantTamer ()
+    public void elephantTamer ()
     {
-        return distancePerDay * 1.15;
+        distancePerDay = distancePerDay * 1.15;
     }
     
-    public Double merchant ()
+    public void merchant ()
     {
-        return tradeYeild * 1.15;
+        tradeYeild = tradeYeild * 1.15;
     }
     
-    public Double navigator ()
+    public void navigator ()
     {
-        return AscentoftheAlps.distance * 0.85;
+        AscentoftheAlps.distance = AscentoftheAlps.distance * 0.85;
     }
 }

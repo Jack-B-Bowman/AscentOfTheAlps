@@ -8,8 +8,6 @@ import javax.swing.JLabel;
 public class PlayerStats extends JPanel {
     public PlayerStats() {
         setBounds(20, 20, 800, 250);
-        setLayout(null);
-        
-        
+        setLayout(null);       
     }
 }

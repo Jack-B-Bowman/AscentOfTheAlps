@@ -15,16 +15,11 @@ public class AnimationWindow extends JPanel {
         JLabel elephant = new JLabel("Elephants");
         BufferedImage pic = ImageIO.read(this.getClass().getResource("/Elephant.png"));
 
-
         background.setBounds(0, 0, 785, 215);
         add(background);
-        
-        
+                
         elephant.setBounds(688,155,97,60);
         elephant.setIcon(new ImageIcon(pic));
         add(elephant);
-
-
-
     }
 }

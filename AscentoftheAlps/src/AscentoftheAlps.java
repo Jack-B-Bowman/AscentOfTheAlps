@@ -34,44 +34,5 @@ public class AscentoftheAlps {
 
                     Inventory.foodSupply -= Var.foodConsumption;
                     Inventory.Distance -= Var.distancePerDay;
-                    
-//        if (stop = true) {
-//        } else {
-//            while (disttraveled != distance) {
-//
-//
-//
-//                System.out.println(disttraveled);
-//
-//                if (haschef = true) {
-//                    eatfood = partynum - 1;
-//                    food = food - eatfood;
-//                    System.out.println("You have " + food + "units of food left");
-//                    //calculations differ if haschef = true (use 1 less food)
-//
-//                } else {
-//                    eatfood = partynum;
-//                    food = food - eatfood;
-//                    System.out.println("You have " + food + "units of food left");
-//                    // calculations differ if haschef = false (use default food)
-//                }
-//
-//
-//
-//
-//                if (eventtrigger = true) {
-//                    break;
-//
-//                    //travel forever until an event happens, then break out of the loop
-//                }
-//                if (stop = true) {
-//                    break;
-//                }
-//
-//
-//            }
-//
-//        }
-
     }
 }

@@ -1,9 +1,7 @@
-
 import java.awt.EventQueue;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
 import javax.swing.JFrame;
 import javax.imageio.ImageIO;
 import javax.swing.GroupLayout;
@@ -64,23 +62,33 @@ public class GUI {
         appWindow.setBounds(100, 100, 450, 300);
         appWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         appWindow.setSize(800, 800);
-
+        
         JPanel AnimationWindow = new JPanel();
         AnimationWindow.setBounds(0, 0, 785, 215);
         AnimationWindow.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 
+        //creates the inventory panel
         final InventoryPanel invPanel = new InventoryPanel();
         invPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
         invPanel.setBounds(352, 336, 432, 150);
 
+        //creates inventory panel label
         JLabel lblNewLabel = new JLabel("Inventory");
         lblNewLabel.setBounds(352, 316, 87, 14);
         lblNewLabel.setLabelFor(invPanel);
 
+        //initial label setting
+        invPanel.SetLblFood(Inventory.foodSupply.toString());
+        invPanel.SetLblElephants(Inventory.Elephants.toString());
+        invPanel.SetLblBullets(Inventory.Bullets.toString());
+        invPanel.SetLblRepairkits(Inventory.Repairkits.toString());
+        
+        //creates playerstats panel
         final PlayerStats playerStats = new PlayerStats();
         playerStats.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
         playerStats.setBounds(352, 510, 432, 150);
 
+        //creates playerstats label
         JLabel lblPlayerStats = new JLabel("Player Stats");
         lblPlayerStats.setBounds(352, 490, 87, 14);
         lblPlayerStats.setLabelFor(playerStats);
@@ -91,25 +99,23 @@ public class GUI {
         final JButton btnNewButton = new JButton("Move");
         btnNewButton.setBounds(352, 270, 87, 23);
 
-
-
+        //if the move button is called
         btnNewButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnNewButton) {
                     AscentoftheAlps.day();
                     invPanel.SetLblFood(Inventory.foodSupply.toString());
-
-
                 }
             }
         });
-
+        
+        //if the map button is pressed
         btnMap.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnMap) {
-                    ImageIcon g = new ImageIcon("/europe-map.png");
-               JOptionPane.showMessageDialog(invPanel,null , "Map",JOptionPane.INFORMATION_MESSAGE,g );
-                            
+               ImageIcon icon = new ImageIcon(getClass().getResource("/europe-map.png"));
+               JOptionPane.showMessageDialog(invPanel,null, "Map",JOptionPane.INFORMATION_MESSAGE,icon);                           
                 }
             }
         });

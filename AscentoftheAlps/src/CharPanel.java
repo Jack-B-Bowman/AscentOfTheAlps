@@ -1,15 +1,12 @@
 import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
-
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class CharPanel extends JPanel {
-
 	/**
 	 * Create the panel.
 	 * @throws IOException 

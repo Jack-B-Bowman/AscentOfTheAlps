@@ -9,35 +9,11 @@
  */
 public class Inventory {
     // public static Aidan code begins here
-
-    
+   
     static Double foodSupply = 200.0;
     static Double Distance = 1000.0;  
     static Double Bullets = 0.0;
     static Double Elephants = 2.0;
-    static Double Repairkits = 0.0;
+    static Double Repairkits = 5.0;
     static Double Medicine = 0.0;
-    
-    
-    
-    
-    public String StringFoodSupply(){
-        return foodSupply.toString();
-    }
-    public String Stringbullets(){
-        return Bullets.toString();
-    }
-    public String distance(){
-        return Distance.toString();
-    }
-    public String elephants(){
-        return Elephants.toString();
-    }
-    public String Repairkits(){
-        return Repairkits.toString();
-    }
-    public String Medicine(){
-        return Medicine.toString();
-    }
-    
 }
