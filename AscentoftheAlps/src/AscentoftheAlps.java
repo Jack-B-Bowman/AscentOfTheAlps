@@ -35,6 +35,9 @@ public class AscentoftheAlps {
                     Inventory.foodSupply -= Var.foodConsumption;
                     Inventory.Distance -= Var.distancePerDay;
                     Events.runEvents();
-                    
+//when day is triggered, run foodconsumption, distance and roll for events
+       
+
+
     }
 }
