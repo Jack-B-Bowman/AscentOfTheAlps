@@ -10,6 +10,7 @@ import java.util.*;
 import java.applet.*;
 import sun.audio.*;
 import java.io.*;
+
 /**
  *
  * @author 1mccubbinaid
@@ -21,9 +22,10 @@ public class AscentoftheAlps {
     static boolean eventtrigger = false;
     static boolean stop = false;
     static boolean haschef = false;
-    static int partynum = 0;
-    static double eatfood;
+   
     
+    static boolean movement = false;
+   
     /**
      *
      * @param args the command line arguments
@@ -34,14 +36,14 @@ public class AscentoftheAlps {
         //do not touch this is experimental code from me
 
         // AudioClip chiptune = getAudioClip(getCodeBase(), soundFile);
-        InputStream in = new FileInputStream();
+        // InputStream in = new FileInputStream();
 // Create an AudioStream object from the input stream.
-AudioStream as = new AudioStream(in);
+//AudioStream as = new AudioStream(in);
 // Use the static class member "player" from class AudioPlayer to play
 // clip.
-AudioPlayer.player.start(as);
+//AudioPlayer.player.start(as);
 // Similarly, to stop the audio.
-AudioPlayer.player.stop(as);
+//AudioPlayer.player.stop(as);
 
 
 
@@ -49,14 +51,33 @@ AudioPlayer.player.stop(as);
 
     }
 
-    public static void day() {
+    public static void day() throws InterruptedException {
 
-                    Inventory.foodSupply -= Var.foodConsumption;
-                    Inventory.Distance -= Var.distancePerDay;
-                    Events.runEvents();
-//when day is triggered, run foodconsumption, distance and roll for events
-   
+        //while (movement = true) {
+
+            System.out.println(movement);
+            Inventory.foodSupply -= Var.foodConsumption;
+            Inventory.Distance -= Var.distancePerDay;
+            Events.runEvents();
+            Thread.sleep(600);
+            Inventory.foodSupply.toString();
+            day();
+           //when day is triggered, run foodconsumption, distance and roll for events
+       // i++;
+
+
+
+               // if (i == 10){
+                //    break;
+              //  }
+        }
+
+
+
+
+
+       
 
 
     }
-}
+//}

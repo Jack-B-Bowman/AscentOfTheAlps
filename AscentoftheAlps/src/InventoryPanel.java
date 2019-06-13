@@ -4,11 +4,11 @@ import javax.swing.JLabel;
 
 public class InventoryPanel extends JPanel {
 
-    JLabel lblFood = new JLabel("Food:");
-    JLabel lblElephants = new JLabel("Elephants:");
-    JLabel lblBullets = new JLabel("Bullets:");
-    JLabel lblMedicine = new JLabel("Medicine:");
-    JLabel lblRepairkits = new JLabel("Repair Kits:");
+  static JLabel lblFood = new JLabel("Food:" + Inventory.foodSupply);
+  static  JLabel lblElephants = new JLabel("Elephants:" + Inventory.Elephants);
+  static  JLabel lblBullets = new JLabel("Bullets:" + Inventory.Bullets);
+  static  JLabel lblMedicine = new JLabel("Medicine:" + Inventory.Medicine);
+  static  JLabel lblRepairkits = new JLabel("Repair Kits:" + Inventory.Repairkits);
     /**
      * Create the panel.
      */
@@ -35,21 +35,32 @@ public class InventoryPanel extends JPanel {
         add(lblRepairkits);
     }
 
-    public void SetLblFood(String s) {
-        lblFood.setText("Food: " + s);
-    }
+   public static void SetLblFood() {
 
-    public void SetLblElephants(String s) {
-        lblElephants.setText("Elephants: " + s);
+       lblFood.setText("Food:" + Inventory.foodSupply);
+   }
+
+    public static void SetLblElephants() {
+        lblElephants.setText("Elephants:" + Inventory.Elephants);
     }
     //Aidcode
-    public void SetLblBullets(String s) {
-        lblBullets.setText("Bullets: " + s);
+    public static void SetLblBullets() {
+        lblBullets.setText("Bullets:" + Inventory.Bullets);
     }
-    public void SetLblRepairkits(String s) {
-        lblRepairkits.setText("Repair Kits: " + s);
+    public static void SetLblRepairkits() {
+        lblRepairkits.setText("Medicine:" + Inventory.Medicine);
     }
-    public void SetLblMedicine(String s) {
-        lblMedicine.setText("Medicine: " + s);
-    }   
+    public static void SetLblMedicine() {
+        lblMedicine.setText("Repair Kits:" + Inventory.Repairkits);
+    }
+    int i = 0;
+
+    public static void updateInventory() throws InterruptedException{
+        SetLblFood();
+        SetLblElephants();
+        SetLblBullets();
+        SetLblRepairkits();
+        SetLblMedicine();
+        Thread.sleep(100);
+    }
 }
