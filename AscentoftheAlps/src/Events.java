@@ -6,7 +6,7 @@ import java.util.Random;
 public class Events
 {
     static Random actOfGod = new Random();
-    static int chance = actOfGod.nextInt(50);
+    static int chance = actOfGod.nextInt(50) + 1;
 
     public static void runEvents ()
     {
