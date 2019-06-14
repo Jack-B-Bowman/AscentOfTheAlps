@@ -136,24 +136,19 @@ public class GUI {
         JButton btnSave = new JButton("Save");
         btnSave.setBounds(449, 241, 87, 23);
 
-        final JButton btnStop = new JButton("Stop");
-        btnStop.addActionListener(new ActionListener() {
+        final JButton btnCommitDie = new JButton("Suicide");
+        btnCommitDie.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                if (arg0.getSource() == btnStop) {
-                    try {
-                        InventoryPanel.updateInventory();
-                    } catch (InterruptedException ex) {
-                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    AscentoftheAlps.movement = false;
-                    System.out.println(AscentoftheAlps.movement);
+                if (arg0.getSource() == btnCommitDie) {
+                ImageIcon icon = new ImageIcon(getClass().getResource("/winning.jpg"));
+                JOptionPane.showMessageDialog(invPanel, null, "You Won!", JOptionPane.INFORMATION_MESSAGE, icon);
                 }
 
             }
         });
-        btnStop.setBounds(449, 270, 87, 23);
+        btnCommitDie.setBounds(449, 270, 87, 23);
         appWindow.getContentPane().setLayout(null);
         appWindow.getContentPane().add(AnimationWindow);
         AnimationWindow.setLayout(null);
@@ -165,7 +160,7 @@ public class GUI {
         playerStats.setLayout(null);
         appWindow.getContentPane().add(btnMove);
         appWindow.getContentPane().add(btnMap);
-        appWindow.getContentPane().add(btnStop);
+        appWindow.getContentPane().add(btnCommitDie);
         appWindow.getContentPane().add(btnSave);
 
         CharPanel charPanel = new CharPanel();

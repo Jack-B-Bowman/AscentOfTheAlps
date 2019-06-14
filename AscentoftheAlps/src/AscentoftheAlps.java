@@ -23,7 +23,6 @@ public class AscentoftheAlps {
     static boolean stop = false;
     static boolean haschef = false;
    
-    
     static boolean movement = false;
    
     /**
@@ -53,23 +52,20 @@ public class AscentoftheAlps {
 
     public static void day() throws InterruptedException {
 
-        //while (movement = true) {
+        for (int i = 0;i < 5; i++){
 
             System.out.println(movement);
             Inventory.foodSupply -= Var.foodConsumption;
             Inventory.Distance -= Var.distancePerDay;
             Events.runEvents();
-            Thread.sleep(600);
             Inventory.foodSupply.toString();
-            day();
+            InventoryPanel.updateInventory();
+            Thread.sleep(300);
+            
+            
            //when day is triggered, run foodconsumption, distance and roll for events
-       // i++;
-
-
-
-               // if (i == 10){
-                //    break;
-              //  }
+        }
+        int i = 0;
         }
 
 
@@ -80,4 +76,4 @@ public class AscentoftheAlps {
 
 
     }
-//}
+
