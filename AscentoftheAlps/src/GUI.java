@@ -1,29 +1,17 @@
 
 import java.awt.EventQueue;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
-import javax.imageio.ImageIO;
-import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JPanel;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JLabel;
 import javax.swing.border.EtchedBorder;
-import javax.swing.border.TitledBorder;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.CompoundBorder;
-import javax.swing.Icon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JDialog;
 import javax.swing.JOptionPane;
-import javax.swing.JToggleButton;
 
 public class GUI {
 
@@ -142,8 +130,14 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnCommitDie) {
-                ImageIcon icon = new ImageIcon(getClass().getResource("/winning.jpg"));
+                ImageIcon icon = new ImageIcon(getClass().getResource("/keyser.png"));
                 JOptionPane.showMessageDialog(invPanel, null, "You Won!", JOptionPane.INFORMATION_MESSAGE, icon);
+                    try {
+                        AscentoftheAlps.suicide();
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                
                 }
 
             }
