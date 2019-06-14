@@ -6,10 +6,18 @@ import java.util.Random;
 public class Events
 {
     static Random actOfGod = new Random();
-    static int chance = actOfGod.nextInt(50) + 1;
 
+    public void mutiny()
+    {
+        if (Var.hasChef){
+            Var.chefDie();
+        }
+    }
+    
     public static void runEvents ()
     {
+        int chance = actOfGod.nextInt(50) + 1;
+        
         switch(chance)
         {
             case(1):
@@ -113,5 +121,5 @@ public class Events
             case (50):
                 break;            
         }
-    }   
+    } 
 }
