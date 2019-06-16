@@ -58,7 +58,6 @@ public class AscentoftheAlps {
 //    e.printStackTrace();
 //}
 
-
     }
 static <T> void print(T e){System.out.println(e);}
     public static void day() throws InterruptedException {

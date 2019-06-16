@@ -15,7 +15,7 @@ public class Var {
     static boolean hasDog = false;
     static boolean hasPreist = false;
     static boolean hasHunter = false;
-    static String [] team = {"Merchant", "Chef", "Navigator", "Dog", "Priest", "Hunter"};
+    static String [] team = {"Merchant", "Chef", "Navigator", "Dog", "Priest", "Hunter", "Elephant Tamer"};
     static public void hunter()
     {
         Inventory.foodSupply = Inventory.foodSupply * 1.15;

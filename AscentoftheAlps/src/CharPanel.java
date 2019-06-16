@@ -23,14 +23,6 @@ public class CharPanel extends JPanel {
 		add(CharIcon);
 		BufferedImage icon = ImageIO.read(this.getClass().getResource("/NPC.png"));
 		CharIcon.setIcon(new ImageIcon(icon));
-		
-		
-		JLabel Name = new JLabel("New label");
-		Name.setBounds(100, 10, 100, 15);
-		add(Name);
-                
-                JComboBox teamList = new JComboBox(Var.team);	
-                teamList.setBounds(100, 45, 180, 25);              
-                add(teamList);
+	
 	}
 }
