@@ -4,6 +4,8 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 
 public class CharPanel extends JPanel {
@@ -26,6 +28,9 @@ public class CharPanel extends JPanel {
 		JLabel Name = new JLabel("New label");
 		Name.setBounds(100, 10, 100, 15);
 		add(Name);
-		
+                
+                JComboBox teamList = new JComboBox(Var.team);	
+                teamList.setBounds(100, 45, 180, 25);              
+                add(teamList);
 	}
 }

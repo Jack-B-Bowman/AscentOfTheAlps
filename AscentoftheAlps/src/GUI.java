@@ -157,20 +157,20 @@ public class GUI {
         appWindow.getContentPane().add(btnCommitDie);
         appWindow.getContentPane().add(btnSave);
 
-        CharPanel charPanel = new CharPanel();
-        charPanel.setBounds(10, 235, 299, 110);
-        appWindow.getContentPane().add(charPanel);
-
         CharPanel charPanel_1 = new CharPanel();
-        charPanel_1.setBounds(10, 355, 299, 110);
+        charPanel_1.setBounds(10, 235, 299, 110);
         appWindow.getContentPane().add(charPanel_1);
-
+       
         CharPanel charPanel_2 = new CharPanel();
-        charPanel_2.setBounds(10, 476, 299, 110);
+        charPanel_2.setBounds(10, 355, 299, 110);
         appWindow.getContentPane().add(charPanel_2);
 
         CharPanel charPanel_3 = new CharPanel();
-        charPanel_3.setBounds(10, 597, 299, 110);
+        charPanel_3.setBounds(10, 476, 299, 110);
         appWindow.getContentPane().add(charPanel_3);
+
+        CharPanel charPanel_4 = new CharPanel();
+        charPanel_4.setBounds(10, 597, 299, 110);
+        appWindow.getContentPane().add(charPanel_4);
     }
 }
