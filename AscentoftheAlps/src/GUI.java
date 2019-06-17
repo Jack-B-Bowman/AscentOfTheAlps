@@ -150,7 +150,6 @@ public class GUI {
         appWindow.getContentPane().add(btnMap);
         appWindow.getContentPane().add(btnCommitDie);
         appWindow.getContentPane().add(btnSave);
-
         // All of the following code has to do with the character panels and setting their names and running their functions
         
         //Creates the drop menu for the possible team characters

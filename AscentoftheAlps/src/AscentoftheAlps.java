@@ -12,11 +12,14 @@ import javax.sound.sampled.LineUnavailableException;
 import sun.audio.*;
 import java.io.*;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.Year;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
+import javax.swing.JLabel;
 /**
  *
  * @author 1mccubbinaid
@@ -70,6 +73,8 @@ static <T> void print(T e){System.out.println(e);}
             Events.runEvents();
             Inventory.foodSupply.toString();
             InventoryPanel.updateInventory();
+            InventoryPanel.dayOfYear++;
+            InventoryPanel.ld = InventoryPanel.y.atDay(InventoryPanel.dayOfYear ) ;
             Thread.sleep(300);
             
             
