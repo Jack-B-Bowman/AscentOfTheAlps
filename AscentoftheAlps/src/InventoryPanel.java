@@ -8,7 +8,7 @@ public class InventoryPanel extends JPanel {
 
   static int dayOfYear = 308 ;
   static Year y = Year.of( -218 ) ;
-  static LocalDate ld = y.atDay( dayOfYear ) ;
+  static LocalDate ld = y.atDay(dayOfYear);
   static JLabel lblFood = new JLabel("Food:" + Inventory.foodSupply);
   static  JLabel lblElephants = new JLabel("Elephants:" + Inventory.Elephants);
   static  JLabel lblBullets = new JLabel("Bullets:" + Inventory.Bullets);

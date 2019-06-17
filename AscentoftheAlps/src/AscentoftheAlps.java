@@ -20,6 +20,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 /**
  *
  * @author 1mccubbinaid
@@ -66,7 +67,14 @@ static <T> void print(T e){System.out.println(e);}
     public static void day() throws InterruptedException {
 
         for (int i = 0;i < 5; i++){
-
+            if (Var.health <= 0)
+            {
+               JOptionPane.showMessageDialog(null, "You Have Died");
+               System.exit(0);
+            }
+            
+            Var.setDisatancePerDay();
+            System.out.println(Var.distancePerDay);
             System.out.println(movement);
             Inventory.foodSupply -= Var.foodConsumption;
             Inventory.Distance -= Var.distancePerDay;
@@ -75,17 +83,13 @@ static <T> void print(T e){System.out.println(e);}
             InventoryPanel.updateInventory();
             InventoryPanel.dayOfYear++;
             InventoryPanel.ld = InventoryPanel.y.atDay(InventoryPanel.dayOfYear ) ;
-            Thread.sleep(300);
-            
-            
+            Thread.sleep(300);          
            //when day is triggered, run foodconsumption, distance and roll for events
         }
-        int i = 0;
         }
 public static void suicide() throws InterruptedException {
   Thread.sleep(1000);
-
-  System.exit(1);
+  System.exit(0);
   
 }
 

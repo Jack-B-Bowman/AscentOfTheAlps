@@ -1,26 +1,50 @@
 import java.util.Random;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 /**
  *
  * @author Taylor Conn
  */
-public class Events
+public class Events extends JPanel
 {
     static Random actOfGod = new Random();
 
-    public void mutiny()
+    public static void mutiny()
     {
+        JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Has Taken All of your Elephants");
+        Inventory.Elephants = 0.0;
+        
         if (Var.hasChef){
             Var.chefDie();
+        }
+        if (Var.hasDog){
+            Var.dogDie();
+        }
+        if (Var.hasElephantTamer){
+            Var.elephantTamerDie();
+        }
+        if (Var.hasHunter){
+            Var.hunterDie();
+        }
+        if (Var.hasMerchant){
+            Var.merchantDie();
+        }
+        if (Var.hasNavigator){
+            Var.navigatorDie();
+        }
+        if (Var.hasPreist){
+            Var.presitDie();
         }
     }
     
     public static void runEvents ()
     {
         int chance = actOfGod.nextInt(50) + 1;
-        
+        System.out.println(chance);
         switch(chance)
         {
             case(1):
+                mutiny();
                 break;
             case (2):
                 break;

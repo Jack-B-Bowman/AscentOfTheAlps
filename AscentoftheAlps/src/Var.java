@@ -4,7 +4,7 @@
  */
 public class Var {
     static Double foodConsumption = 2.0;
-    static Double distancePerDay = 2.0;
+    static Double distancePerDay = 0.0;
     static Double clothingUsage = 2.0;
     static Double tradeYeild = 1.5;
     static Double health = 100.0;
@@ -16,6 +16,12 @@ public class Var {
     static boolean hasPreist = false;
     static boolean hasHunter = false;
     static String [] team = {"Merchant", "Chef", "Navigator", "Dog", "Priest", "Hunter", "Elephant Tamer"};
+    
+    static public void setDisatancePerDay()
+    {
+        distancePerDay = 2.0 * Inventory.Elephants;
+    }
+    
     static public void hunter()
     {
         Inventory.foodSupply = Inventory.foodSupply * 1.15;
@@ -62,7 +68,7 @@ public class Var {
         hasChef = false;
     }
     
-    static public void elephantTamer ()
+    static public void elephantTamer()
     {
         distancePerDay = distancePerDay * 1.15;
         hasElephantTamer = true;
