@@ -55,9 +55,12 @@ public class GUI {
         appWindow.setSize(800, 800);
 
         JPanel AnimationWindow = new JPanel();
-        AnimationWindow.setBounds(0, 0, 785, 215);
-        AnimationWindow.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-
+        final AnimationWindow lol = new AnimationWindow();
+        lol.setBounds(0, 5, 799, 220);
+        lol.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+        appWindow.getContentPane().add(lol);
+        
+        
         //creates the inventory panel
         final InventoryPanel invPanel = new InventoryPanel();
         invPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
@@ -123,7 +126,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnCommitDie) {
-                ImageIcon icon = new ImageIcon(getClass().getResource("/keyser.png"));
+                ImageIcon icon = new ImageIcon(getClass().getResource("/SG.png"));
                 JOptionPane.showMessageDialog(invPanel, null, "You Won!", JOptionPane.INFORMATION_MESSAGE, icon);
                     try {
                         AscentoftheAlps.suicide();
@@ -139,7 +142,7 @@ public class GUI {
         btnCommitDie.setBounds(449, 270, 87, 23);
         appWindow.getContentPane().setLayout(null);
         appWindow.getContentPane().add(AnimationWindow);
-        AnimationWindow.setLayout(null);
+        
         appWindow.getContentPane().add(lblNewLabel);
         appWindow.getContentPane().add(invPanel);
         invPanel.setLayout(null);
@@ -150,7 +153,15 @@ public class GUI {
         appWindow.getContentPane().add(btnMap);
         appWindow.getContentPane().add(btnCommitDie);
         appWindow.getContentPane().add(btnSave);
+        
+
+                
         // All of the following code has to do with the character panels and setting their names and running their functions
+        //__________________________________________________________________________________________________________________
+        //__________________________________________________________________________________________________________________
+        //__________________________________________________________________________________________________________________
+        //__________________________________________________________________________________________________________________
+        //__________________________________________________________________________________________________________________
         
         //Creates the drop menu for the possible team characters
         final JComboBox teamList1 = new JComboBox(Var.team);	

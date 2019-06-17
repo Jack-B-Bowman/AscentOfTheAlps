@@ -1,4 +1,5 @@
 import java.util.Random;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 /**
@@ -11,7 +12,7 @@ public class Events extends JPanel
 
     public static void mutiny()
     {
-        JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Has Taken All of your Elephants");
+        JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Have Taken All of your Elephants");
         Inventory.Elephants = 0.0;
         
         if (Var.hasChef){

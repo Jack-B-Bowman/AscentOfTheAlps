@@ -8,18 +8,13 @@ public class AnimationWindow extends JPanel {
 
     /**
      * Create the panel.
+     * @throws java.io.IOException
      */
     public AnimationWindow() throws IOException {
-        JLabel background = new JLabel("Background");
-        JLabel event = new JLabel("Event");
-        JLabel elephant = new JLabel("Elephants");
-        BufferedImage pic = ImageIO.read(this.getClass().getResource("/Elephant.png"));
-
-        background.setBounds(0, 0, 785, 215);
+        JLabel background = new JLabel();
+        background.setBounds(0, 0, 0, 0);
         add(background);
-                
-        elephant.setBounds(688,155,97,60);
-        elephant.setIcon(new ImageIcon(pic));
-        add(elephant);
+        BufferedImage icon = ImageIO.read(this.getClass().getResource("/Title.png"));
+        background.setIcon(new ImageIcon(icon));
     }
 }
