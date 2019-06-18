@@ -15,7 +15,7 @@ public class PlayerStats extends JPanel {
     static LocalDate ld = y.atDay(dayOfYear);
     static JLabel lblDate = new JLabel("Date: " + ld);
     static JLabel lblDistance = new JLabel("Distance: " + Inventory.Distance);
-
+    // date calculator for the GUI
     public static void SetLblDate() {
         lblDate.setText("Date: " + ld);
     }
@@ -28,6 +28,7 @@ public class PlayerStats extends JPanel {
     public static void callTogether() throws InterruptedException{
         SetLblDistance();
         SetLblDate();
+        // call and update both the distance label and date label
     }
     public PlayerStats() {
         setBounds(20, 20, 800, 250);
@@ -38,5 +39,6 @@ public class PlayerStats extends JPanel {
         lblDate.setBounds(10, 50, 600, 40);
         lblDate.setFont(new Font("Serif", Font.BOLD, 22));
         add(lblDate);
+        //GUI module for distance and date displayed on GUI
     }
 }

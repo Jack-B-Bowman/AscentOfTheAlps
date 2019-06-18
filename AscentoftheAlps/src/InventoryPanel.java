@@ -47,6 +47,7 @@ public class InventoryPanel extends JPanel {
     }
 
     //Aidcode
+    // setting labels on the inventory part of the gui
     public static void SetLblBullets() {
         lblBullets.setText("Bullets:" + Inventory.Bullets);
     }
@@ -58,7 +59,7 @@ public class InventoryPanel extends JPanel {
     public static void SetLblMedicine() {
         lblMedicine.setText("Repair Kits:" + Inventory.Repairkits);
     }
-    int i = 0;
+   
 
     public static void updateInventory() throws InterruptedException {
         SetLblFood();
@@ -67,5 +68,6 @@ public class InventoryPanel extends JPanel {
         SetLblRepairkits();
         SetLblMedicine();
         Thread.sleep(100);
+        //updates inventory by setting the labels and then waiting on call
     }
 }

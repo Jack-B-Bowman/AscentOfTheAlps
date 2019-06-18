@@ -18,7 +18,9 @@ public class Events extends JPanel {
     //Taylor made the switch statement architecture
     public static void runEvents() {
         int chance = actOfGod.nextInt(100) + 1;
-       //int chance = 89;
+       //int chance = 89; test case for hunting event
+       // switch statement on a random number, goto case and then break afterwards
+       //program is frozen until event is complete
         switch (chance) {
             case (1):
                 mutiny();
@@ -62,6 +64,7 @@ public class Events extends JPanel {
             case (18):
                 break;
             case (19):
+                eathuman();
                 break;
             case (20):
                 break;
@@ -76,6 +79,7 @@ public class Events extends JPanel {
             case (25):
                 break;
             case (26):
+                steal();
                 break;
             case (27):
                 break;
@@ -438,4 +442,62 @@ public class Events extends JPanel {
             Inventory.foodSupply = Inventory.foodSupply - 30;
         }
     }
+    // I also made this one
+    public static void eathuman() {
+        int response = JOptionPane.showConfirmDialog(null, "You come across a friendly man in an empty field. Do you wish to eat him?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        switch (response) {
+            case JOptionPane.NO_OPTION:
+                JOptionPane.showMessageDialog(null, "The old man gives you 1 medicine as a thank you for not eating him alive");
+                Inventory.Medicine = Inventory.Medicine + 1;
+                break;
+            case JOptionPane.YES_OPTION:
+                JOptionPane.showMessageDialog(null, "You crunch down on the man's tibia, gaining 50 food but losing 1 health");
+                Inventory.foodSupply = Inventory.foodSupply + 50;
+                Var.health = Var.health - 1;
+            case JOptionPane.CLOSED_OPTION:
+                break;
+            default:
+                break;
+        }
+    }
+    // and this one
+    public static void steal() {
+        int response = JOptionPane.showConfirmDialog(null, "As night falls, you come across a tribal campsite. Will you sneak in under darkness to try and steal supplies?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        switch (response) {
+            case JOptionPane.NO_OPTION:
+                JOptionPane.showMessageDialog(null, "You decide to pass up the opportunity. Instead, you spend the night getting a full night's rest. Gain 1 health");
+                Var.health = Var.health + 1;
+                break;
+            case JOptionPane.YES_OPTION:
+                JOptionPane.showMessageDialog(null, "After successfully stealing some supplies, you awoke a tribal sentry and took an arrow to the back while escaping. Lose 1 health");
+                Inventory.Bullets = Inventory.Bullets + 20;
+                Inventory.Repairkits = Inventory.Repairkits + 1;
+                Inventory.foodSupply = Inventory.foodSupply + 30;
+                Var.health = Var.health - 1;
+            case JOptionPane.CLOSED_OPTION:
+                break;
+            default:
+                break;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

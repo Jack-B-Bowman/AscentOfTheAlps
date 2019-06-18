@@ -32,6 +32,7 @@ public class AscentoftheAlps {
 
     public static void main(String[] args) throws LineUnavailableException {
         GUI.main(null);
+        //starts the GUI
     }
 
     static <T> void print(T e) {
@@ -44,6 +45,7 @@ public class AscentoftheAlps {
             if (Var.health <= 0) {
                 JOptionPane.showMessageDialog(null, "You Have Died");
                 System.exit(0);
+                // taylor's player health system, below 0 is death
             }
 
             Var.setDisatancePerDay();
@@ -51,6 +53,7 @@ public class AscentoftheAlps {
             System.out.println(movement);
             Inventory.foodSupply -= Var.foodConsumption;
             Inventory.Distance -= Var.distancePerDay;
+            // food consumption calculations
             Events.runEvents();
             Inventory.foodSupply.toString();
             InventoryPanel.updateInventory();
@@ -65,5 +68,6 @@ public class AscentoftheAlps {
     public static void suicide() throws InterruptedException {
         Thread.sleep(1000);
         System.exit(0);
+        // just wait and then exit when the suicide button is pressed
     }
 }
