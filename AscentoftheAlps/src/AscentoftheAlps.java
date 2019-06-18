@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -21,9 +16,10 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
 /**
  *
- * @author 1mccubbinaid
+ * @author 1mccubbinaid, Taylor Conn finished it off
  */
 public class AscentoftheAlps {
 
@@ -32,47 +28,24 @@ public class AscentoftheAlps {
     static boolean eventtrigger = false;
     static boolean stop = false;
     static boolean haschef = false;
-   
     static boolean movement = false;
-   
-    /**
-     *
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws LineUnavailableException  {
-        GUI.main(null);
-//        try {
-//    File file = new File((getResource("/8bit.WAV")).getFile());
-//    AudioInputStream stream;
-//    AudioFormat format;
-//    DataLine.Info info;
-//    Clip clip;
-//
-//    stream = AudioSystem.getAudioInputStream(file);
-//    format = stream.getFormat();
-//    info = new DataLine.Info(Clip.class, format);
-//    clip = (Clip) AudioSystem.getLine(info);
-//    clip.open(stream);
-//    clip.start();
-//    print(clip);
-//
-//}
-//catch (Exception e) {
-//    //whatevers
-//    e.printStackTrace();
-//}
 
+    public static void main(String[] args) throws LineUnavailableException {
+        GUI.main(null);
     }
-static <T> void print(T e){System.out.println(e);}
+
+    static <T> void print(T e) {
+        System.out.println(e);
+    }
+
     public static void day() throws InterruptedException {
 
-        for (int i = 0;i < 5; i++){
-            if (Var.health <= 0)
-            {
-               JOptionPane.showMessageDialog(null, "You Have Died");
-               System.exit(0);
+        for (int i = 0; i < 5; i++) {
+            if (Var.health <= 0) {
+                JOptionPane.showMessageDialog(null, "You Have Died");
+                System.exit(0);
             }
-            
+
             Var.setDisatancePerDay();
             System.out.println(Var.distancePerDay);
             System.out.println(movement);
@@ -81,23 +54,16 @@ static <T> void print(T e){System.out.println(e);}
             Events.runEvents();
             Inventory.foodSupply.toString();
             InventoryPanel.updateInventory();
-            InventoryPanel.dayOfYear++;
-            InventoryPanel.ld = InventoryPanel.y.atDay(InventoryPanel.dayOfYear ) ;
-            Thread.sleep(300);          
-           //when day is triggered, run foodconsumption, distance and roll for events
+            PlayerStats.dayOfYear++;
+            PlayerStats.ld = PlayerStats.y.atDay(PlayerStats.dayOfYear);
+            PlayerStats.callTogether();
+            Thread.sleep(300);
+            //when day is triggered, run foodconsumption, distance and roll for events
         }
-        }
-public static void suicide() throws InterruptedException {
-  Thread.sleep(1000);
-  System.exit(0);
-  
-}
-
-
-
-
-       
-
-
     }
 
+    public static void suicide() throws InterruptedException {
+        Thread.sleep(1000);
+        System.exit(0);
+    }
+}

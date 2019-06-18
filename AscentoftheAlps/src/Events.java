@@ -1,50 +1,49 @@
+
 import java.util.Random;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
 /**
  *
- * @author Taylor Conn
+ * @author Taylor Conn I built dis with the guidence and psudocode of Aidan and Jack
  */
-public class Events extends JPanel
-{
+public class Events extends JPanel {
+
     static Random actOfGod = new Random();
 
-    public static void mutiny()
-    {
+    public static void mutiny() {
         JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Have Taken All of your Elephants");
         Inventory.Elephants = 0.0;
-        
-        if (Var.hasChef){
+
+        if (Var.hasChef) {
             Var.chefDie();
         }
-        if (Var.hasDog){
+        if (Var.hasDog) {
             Var.dogDie();
         }
-        if (Var.hasElephantTamer){
+        if (Var.hasElephantTamer) {
             Var.elephantTamerDie();
         }
-        if (Var.hasHunter){
+        if (Var.hasHunter) {
             Var.hunterDie();
         }
-        if (Var.hasMerchant){
+        if (Var.hasMerchant) {
             Var.merchantDie();
         }
-        if (Var.hasNavigator){
+        if (Var.hasNavigator) {
             Var.navigatorDie();
         }
-        if (Var.hasPreist){
+        if (Var.hasPreist) {
             Var.presitDie();
         }
     }
-    
-    public static void runEvents ()
-    {
+
+    public static void runEvents() {
         int chance = actOfGod.nextInt(50) + 1;
         System.out.println(chance);
-        switch(chance)
-        {
-            case(1):
+        switch (chance) {
+            case (1):
                 mutiny();
                 break;
             case (2):
@@ -95,7 +94,7 @@ public class Events extends JPanel
                 break;
             case (25):
                 break;
-            case  (26):
+            case (26):
                 break;
             case (27):
                 break;
@@ -144,7 +143,7 @@ public class Events extends JPanel
             case (49):
                 break;
             case (50):
-                break;            
+                break;
         }
-    } 
+    }
 }

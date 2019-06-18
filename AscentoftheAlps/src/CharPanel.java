@@ -1,3 +1,4 @@
+
 import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 import java.awt.image.BufferedImage;
@@ -9,20 +10,21 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 
 public class CharPanel extends JPanel {
-	/**
-	 * Create the panel.
-	 * @throws IOException 
-	 */
-	public CharPanel() throws IOException {
-		setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		setSize(299,110);
-		setLayout(null);
-		
-		JLabel CharIcon = new JLabel("New label");
-		CharIcon.setBounds(0, 10, 90, 90);
-		add(CharIcon);
-		BufferedImage icon = ImageIO.read(this.getClass().getResource("/NPC.png"));
-		CharIcon.setIcon(new ImageIcon(icon));
-	
-	}
+
+    /**
+     * Create the panel.
+     *
+     * @throws IOException
+     */
+    public CharPanel() throws IOException {
+        setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+        setSize(299, 110);
+        setLayout(null);
+
+        JLabel CharIcon = new JLabel("New label");
+        CharIcon.setBounds(0, 10, 90, 90);
+        add(CharIcon);
+        BufferedImage icon = ImageIO.read(this.getClass().getResource("/NPC.png"));
+        CharIcon.setIcon(new ImageIcon(icon));
+    }
 }
