@@ -8,6 +8,9 @@ import javax.swing.JPanel;
  *
  * @author Taylor Conn I built dis with the guidence and psudocode of Aidan and Jack
  */
+//Aidan note
+//it's not pseudocode taylor fuck you I was working without knowledge of the variables or systems
+//the only problem with it was not having the crew interactions or public static void calls, the popups and inventory interactions were fine
 public class Events extends JPanel {
 
     static Random actOfGod = new Random();
