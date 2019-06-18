@@ -12,10 +12,10 @@ public class Events extends JPanel {
 
     static Random actOfGod = new Random();
 
-    
+    //Taylor made the switch statement architecture
     public static void runEvents() {
-        int chance = actOfGod.nextInt(50) + 1;
-        System.out.println(chance);
+        //int chance = actOfGod.nextInt(100) + 1;
+       int chance = 89;
         switch (chance) {
             case (1):
                 mutiny();
@@ -25,6 +25,7 @@ public class Events extends JPanel {
             case (3):
                 break;
             case (4):
+                scam_1();
                 break;
             case (5):
                 break;
@@ -33,18 +34,21 @@ public class Events extends JPanel {
             case (7):
                 break;
             case (8):
+                trade_2();
                 break;
             case (9):
                 break;
             case (10):
                 break;
             case (11):
+                scam_2();
                 break;
             case (12):
                 break;
             case (13):
                 break;
             case (14):
+                trade_1();
                 break;
             case (15):
                 break;
@@ -83,6 +87,7 @@ public class Events extends JPanel {
             case (32):
                 break;
             case (33):
+                findAppleTree();
                 break;
             case (34):
                 break;
@@ -109,6 +114,7 @@ public class Events extends JPanel {
             case (45):
                 break;
             case (46):
+                findAppleTree();
                 break;
             case (47):
                 break;
@@ -143,12 +149,15 @@ public class Events extends JPanel {
             case (62):
                 break;
             case (63):
+                 findFigTree();
                 break;
             case (64):
+                findAppleTree();
                 break;
             case (65):
                 break;
             case (66):
+                findPearTree();
                 break;
             case (67):
                 break;
@@ -167,6 +176,7 @@ public class Events extends JPanel {
             case (74):
                 break;
             case (75):
+                foodThief();
                 break;
             case (76):
                 break;
@@ -179,32 +189,39 @@ public class Events extends JPanel {
             case (80):
                 break;
             case (81):
+                findAppleTree();
                 break;
             case (82):
                 break;
             case (83):
                 break;
             case (84):
+                findPearTree();
                 break;
             case (85):
                 break;
             case (86):
                 break;
             case (87):
+                foodThief();
                 break;
             case (88):
+                trade_3();
                 break;
             case (89):
+                huntingTrip();
                 break;
             case (90):
                 break;
             case (91):
+                 findFigTree();
                 break;
             case (92):
                 break;
             case (93):
                 break;
             case (94):
+                huntingTrip();
                 break;
             case (95):
                 break;
@@ -215,12 +232,14 @@ public class Events extends JPanel {
             case (98):
                 break;
             case (99):
+                findPeachTree();
                 break;
             case (100):
                 break;
         }
     }
     
+    //Taylor wrote the mutiny event
     public static void mutiny() {
         JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Have Taken All of your Elephants");
         Inventory.Elephants = 0.0;
@@ -248,5 +267,171 @@ public class Events extends JPanel {
         }
     }
     
+    //Aidan wrote the scam event
+    public static void scam_1() {
+        int response = JOptionPane.showConfirmDialog(null, "A suspicious man offers you 200 food if you wire 50 food to the bank of nigeria to confirm the transaction. Take the deal?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        switch (response) {
+            case JOptionPane.NO_OPTION:
+                break;
+            case JOptionPane.YES_OPTION:
+                if (Inventory.foodSupply >= 50) {
+                    Inventory.foodSupply = Inventory.foodSupply - 50;
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(null, "You did not have sufficient supplies");
+                    break;
+                }
+            case JOptionPane.CLOSED_OPTION:
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void scam_2() {
+        int response = JOptionPane.showConfirmDialog(null, "A happy merchant approaches and offers to trade 5 medicine for 30 food at 15% daily compounding interest. Do you accept?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        switch (response) {
+            case JOptionPane.NO_OPTION:
+                break;
+            case JOptionPane.YES_OPTION:
+                if (Inventory.foodSupply >= 30) {
+                    Inventory.foodSupply = Inventory.foodSupply - 30;
+                    Inventory.Medicine = Inventory.Medicine + 5;
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(null, "You did not have sufficient supplies");
+                    break;
+                }
+            case JOptionPane.CLOSED_OPTION:
+                break;
+
+            default:
+                break;
+        }
+    }
     
+    public static void trade_1() {
+        int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 20 food for a repair kit?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        switch (response) {
+            case JOptionPane.NO_OPTION:
+                break;
+            case JOptionPane.YES_OPTION:
+                if (Inventory.foodSupply >= 20) {
+                    Inventory.foodSupply = Inventory.foodSupply - 20;
+                    Inventory.Repairkits = Inventory.Repairkits + 1;
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(null, "You did not have sufficient supplies");
+                    break;
+                }
+            case JOptionPane.CLOSED_OPTION:
+                break;
+
+            default:
+                break;
+        }
+    }
+    
+    public static void trade_2() {
+        int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 15 food for 1 medicine?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        switch (response) {
+            case JOptionPane.NO_OPTION:
+                break;
+            case JOptionPane.YES_OPTION:
+                if (Inventory.foodSupply >= 15) {
+                    Inventory.foodSupply = Inventory.foodSupply - 15;
+                    Inventory.Medicine = Inventory.Medicine + 1;
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(null, "You did not have sufficient supplies");
+                    break;
+                }
+            case JOptionPane.CLOSED_OPTION:
+                break;
+            default:
+                break;
+        }
+    }
+    
+    public static void trade_3() {
+        int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 15 food for 1 medicine?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        switch (response) {
+            case JOptionPane.NO_OPTION:
+                break;
+            case JOptionPane.YES_OPTION:
+                if (Inventory.foodSupply >= 15) {
+                    Inventory.foodSupply = Inventory.foodSupply - 15;
+                    Inventory.Medicine = Inventory.Medicine + 1;
+                    break;
+                } else {
+                    JOptionPane.showMessageDialog(null, "You did not have sufficient supplies");
+                    break;
+                }
+            case JOptionPane.CLOSED_OPTION:
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void findAppleTree() {
+        JOptionPane.showMessageDialog(null, "On your journey you discovered an apple tree. After some time spent picking you depart with 25 food");
+        Inventory.foodSupply = Inventory.foodSupply + 25;
+    }
+
+    public static void findPearTree() {
+        JOptionPane.showMessageDialog(null, "On your journey you discovered a pear tree. After some time spent picking you depart with 25 food");
+        Inventory.foodSupply = Inventory.foodSupply + 25;
+    }
+
+    public static void findFigTree() {
+        JOptionPane.showMessageDialog(null, "On your journey you discovered a fig tree. After some time spent picking you depart without any food because figs are not food they are god’s idea of a joke");
+        Inventory.foodSupply = Inventory.foodSupply + 0;
+    }
+
+    public static void findPeachTree() {
+        JOptionPane.showMessageDialog(null, "On your journey you discovered a peach tree. After some time spent picking you depart with 30 food");
+        Inventory.foodSupply = Inventory.foodSupply + 30;
+    }
+
+    public static void theifInTheNight() {
+        JOptionPane.showMessageDialog(null, "While you were asleep, a thief snuck into your camp and attempted to steal one of your elephants!");
+        if (Var.hasDog) {
+            JOptionPane.showMessageDialog(null, " It’s a good thing you had a dog to keep watch!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Because you had nobody to keep watch, you lost 1 elephant");
+            Inventory.Elephants = Inventory.Elephants - 1;
+        }
+    }
+
+    public static void huntingTrip() {
+        JOptionPane.showMessageDialog(null, "On your travels, you come across what looks like a potentially good hunting grounds.");
+        if (Var.hasHunter && Inventory.Bullets >= 10) {
+            JOptionPane.showMessageDialog(null, " Your hunter managed to bring back over 100 food. A successful diversion");
+            Inventory.foodSupply = Inventory.foodSupply + 100;
+            Inventory.Bullets = Inventory.Bullets - 10;
+        } else if (Inventory.Bullets >= 15) {
+            JOptionPane.showMessageDialog(null, " You only manage to catch small game, returning with 40 food");
+            Inventory.foodSupply = Inventory.foodSupply + 40;
+            Inventory.Bullets = Inventory.Bullets - 15;
+        } else {
+            JOptionPane.showMessageDialog(null, "You have an insufficient amount of bullets to hunt with any hope of catching anything");
+        }
+    }
+
+    public static void foodThief() {
+        JOptionPane.showMessageDialog(null, "While you were asleep, a thief snuck into your camp and attempted to steal your food!");
+        if (Var.hasDog) {
+            JOptionPane.showMessageDialog(null, " It’s a good thing you had a dog to keep watch!");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Because you had nobody to keep watch, you lost 30 food");
+            Inventory.foodSupply = Inventory.foodSupply - 30;
+        }
+    }
 }
