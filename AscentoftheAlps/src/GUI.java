@@ -112,7 +112,7 @@ public class GUI {
 
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnMap) {
-                    ImageIcon icon = new ImageIcon(getClass().getResource("/europe-map.png"));
+                    ImageIcon icon = new ImageIcon(getClass().getResource("/H.png"));
                     JOptionPane.showMessageDialog(invPanel, null, "Map", JOptionPane.INFORMATION_MESSAGE, icon);
                 }
             }
@@ -128,7 +128,8 @@ public class GUI {
             public void actionPerformed(ActionEvent arg0) {
                 if (arg0.getSource() == btnCommitDie) {
                     ImageIcon icon = new ImageIcon(getClass().getResource("/SG.png"));
-                    JOptionPane.showMessageDialog(invPanel, null, "You Won!", JOptionPane.INFORMATION_MESSAGE, icon);
+                    JOptionPane.showMessageDialog(invPanel, null, "A Cowards Way Out", JOptionPane.INFORMATION_MESSAGE, icon);
+                    Inventory.Bullets--;
                     try {
                         AscentoftheAlps.suicide();
                     } catch (InterruptedException ex) {

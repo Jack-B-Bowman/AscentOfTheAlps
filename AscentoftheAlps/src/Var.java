@@ -20,7 +20,7 @@ public class Var {
     static String[] team = {"Merchant", "Chef", "Navigator", "Dog", "Priest", "Hunter", "Elephant Tamer"};
 
     static public void setDisatancePerDay() {
-        distancePerDay = 2.0 * Inventory.Elephants;
+        distancePerDay = 20.0 * Inventory.Elephants;
     }
 
     static public void hunter() {

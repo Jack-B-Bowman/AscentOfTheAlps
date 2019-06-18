@@ -57,7 +57,7 @@ public class AscentoftheAlps {
             PlayerStats.dayOfYear++;
             PlayerStats.ld = PlayerStats.y.atDay(PlayerStats.dayOfYear);
             PlayerStats.callTogether();
-            Thread.sleep(300);
+            Thread.sleep(200);
             //when day is triggered, run foodconsumption, distance and roll for events
         }
     }

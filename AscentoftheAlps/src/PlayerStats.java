@@ -17,12 +17,12 @@ public class PlayerStats extends JPanel {
     static JLabel lblDistance = new JLabel("Distance: " + Inventory.Distance);
 
     public static void SetLblDate() {
-        lblDate.setText("Date:" + ld);
+        lblDate.setText("Date: " + ld);
     }
 
     public static void SetLblDistance() {
 
-        lblDistance.setText("Distance:" + Inventory.Distance);
+        lblDistance.setText("Distance: " + Inventory.Distance);
     }
 
     public static void callTogether() throws InterruptedException{
