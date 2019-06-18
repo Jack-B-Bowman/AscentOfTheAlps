@@ -14,8 +14,8 @@ public class Events extends JPanel {
 
     //Taylor made the switch statement architecture
     public static void runEvents() {
-        //int chance = actOfGod.nextInt(100) + 1;
-       int chance = 89;
+        int chance = actOfGod.nextInt(100) + 1;
+       //int chance = 89;
         switch (chance) {
             case (1):
                 mutiny();
@@ -288,7 +288,7 @@ public class Events extends JPanel {
                 break;
         }
     }
-
+    // aidan here
     public static void scam_2() {
         int response = JOptionPane.showConfirmDialog(null, "A happy merchant approaches and offers to trade 5 medicine for 30 food at 15% daily compounding interest. Do you accept?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -311,7 +311,7 @@ public class Events extends JPanel {
                 break;
         }
     }
-    
+    // also here
     public static void trade_1() {
         int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 20 food for a repair kit?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -334,7 +334,7 @@ public class Events extends JPanel {
                 break;
         }
     }
-    
+    //and here
     public static void trade_2() {
         int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 15 food for 1 medicine?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -356,7 +356,7 @@ public class Events extends JPanel {
                 break;
         }
     }
-    
+    // and this one
     public static void trade_3() {
         int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 15 food for 1 medicine?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -378,27 +378,27 @@ public class Events extends JPanel {
                 break;
         }
     }
-
+    // Aidan did this event
     public static void findAppleTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered an apple tree. After some time spent picking you depart with 25 food");
         Inventory.foodSupply = Inventory.foodSupply + 25;
     }
-
+    // and this one
     public static void findPearTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a pear tree. After some time spent picking you depart with 25 food");
         Inventory.foodSupply = Inventory.foodSupply + 25;
     }
-
+    // and this one
     public static void findFigTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a fig tree. After some time spent picking you depart without any food because figs are not food they are god’s idea of a joke");
         Inventory.foodSupply = Inventory.foodSupply + 0;
     }
-
+    // and this one
     public static void findPeachTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a peach tree. After some time spent picking you depart with 30 food");
         Inventory.foodSupply = Inventory.foodSupply + 30;
     }
-
+    // and this one
     public static void theifInTheNight() {
         JOptionPane.showMessageDialog(null, "While you were asleep, a thief snuck into your camp and attempted to steal one of your elephants!");
         if (Var.hasDog) {
@@ -408,7 +408,7 @@ public class Events extends JPanel {
             Inventory.Elephants = Inventory.Elephants - 1;
         }
     }
-
+    // and this one
     public static void huntingTrip() {
         JOptionPane.showMessageDialog(null, "On your travels, you come across what looks like a potentially good hunting grounds.");
         if (Var.hasHunter && Inventory.Bullets >= 10) {
@@ -422,8 +422,9 @@ public class Events extends JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "You have an insufficient amount of bullets to hunt with any hope of catching anything");
         }
+    //if you have a hunter and bullets, gain 100 food for 10 bullets else gain 40 food and waste 15 bullets
     }
-
+    // and this one
     public static void foodThief() {
         JOptionPane.showMessageDialog(null, "While you were asleep, a thief snuck into your camp and attempted to steal your food!");
         if (Var.hasDog) {

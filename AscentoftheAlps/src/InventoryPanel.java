@@ -50,7 +50,7 @@ public class InventoryPanel extends JPanel {
     public static void SetLblBullets() {
         lblBullets.setText("Bullets:" + Inventory.Bullets);
     }
-
+    
     public static void SetLblRepairkits() {
         lblRepairkits.setText("Medicine:" + Inventory.Medicine);
     }
