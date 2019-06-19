@@ -116,16 +116,16 @@ public class GUI {
             }
         });
 
-        final JButton btnSave = new JButton("Beg For Food");
-        btnSave.setBounds(449, 241, 174, 23);
-        btnSave.addActionListener(new ActionListener() {
+        final JButton btnBeg = new JButton("Beg For Food");
+        btnBeg.setBounds(449, 241, 174, 23);
+        btnBeg.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent arg0) {
-                if (arg0.getSource() == btnSave) {
+                if (arg0.getSource() == btnBeg) {
                     if (Inventory.foodSupply < 20) {
                         JOptionPane.showMessageDialog(null, "Your begging is answered by some kind mountain dwellers");
                         Inventory.foodSupply = Inventory.foodSupply + 10;
-                        btnSave.disable();
+                        btnBeg.disable();
                     }
                     JOptionPane.showMessageDialog(null, "No one but the wind can hear your cries");
                 }
@@ -154,6 +154,20 @@ public class GUI {
         });
 
         btnCommitDie.setBounds(449, 270, 87, 23);
+        
+        // if the guide button is clicked
+        JButton btnGuide = new JButton("Guide");
+        btnGuide.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent arg0) {
+                    if (arg0.getSource() == btnGuide) {
+                        ImageIcon icon = new ImageIcon(getClass().getResource("/Guide.png"));
+                        JOptionPane.showMessageDialog(invPanel, null, "Guide", JOptionPane.INFORMATION_MESSAGE, icon);
+                    }
+                
+        	}
+        });
+        btnGuide.setBounds(546, 270, 77, 23);
+        appWindow.getContentPane().add(btnGuide);
         appWindow.getContentPane().setLayout(null);
         appWindow.getContentPane().add(lblNewLabel);
         appWindow.getContentPane().add(invPanel);
@@ -164,7 +178,7 @@ public class GUI {
         appWindow.getContentPane().add(btnMove);
         appWindow.getContentPane().add(btnMap);
         appWindow.getContentPane().add(btnCommitDie);
-        appWindow.getContentPane().add(btnSave);
+        appWindow.getContentPane().add(btnBeg);
 
         // All of the following code has to do with the character panels and setting
         // their names and running their functions
@@ -434,6 +448,8 @@ public class GUI {
         final CharPanel charPanel_4 = new CharPanel();
         charPanel_4.setBounds(10, 597, 299, 110);
         appWindow.getContentPane().add(charPanel_4);
+        
+
 
         // Checks what the selected Character is and changes the label
         teamList4.addActionListener(new ActionListener() {
