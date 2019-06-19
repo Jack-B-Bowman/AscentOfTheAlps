@@ -285,6 +285,7 @@ public class Events extends JPanel {
     public static void mutiny() {
         if (!PlayerStats.ab) {
             JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Have Taken All of your Elephants");
+            PlayerStats.ab = true;
             Inventory.Elephants = 0.0;
 
             if (Var.hasChef) {

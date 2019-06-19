@@ -73,7 +73,7 @@ public class InventoryPanel extends JPanel {
 
     public static void isDone() {
         if (Inventory.Distance <= 0 && !InventoryPanel.done) {
-            JOptionPane.showMessageDialog(null, "Your Journey is Complete. How are a strategic genius and deserve the highest of praise. Godspeed");
+            JOptionPane.showMessageDialog(null, "Your Journey is Complete. You are a strategic genius and deserve the highest of praise. Godspeed");
             InventoryPanel.done = true;
             AscentoftheAlps.outlogger.close();
             System.exit(0);
