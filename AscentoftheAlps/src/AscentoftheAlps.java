@@ -22,12 +22,15 @@ import javax.swing.JOptionPane;
  * @author 1mccubbinaid, Taylor Conn finished it off
  */
 public class AscentoftheAlps {
-
+    
     static boolean movement = false;
-
-    public static void main(String[] args) throws LineUnavailableException {
+    
+    public static void main(String[] args) throws LineUnavailableException, FileNotFoundException {
         GUI.main(null);
-        //starts the GUI
+        File history = new File ("history.txt");
+        PrintWriter outlogger = new PrintWriter(history);
+        
+        //starts the GUI, starts logging
     }
 
     static <T> void print(T e) {
