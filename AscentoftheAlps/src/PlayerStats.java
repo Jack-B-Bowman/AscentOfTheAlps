@@ -17,7 +17,7 @@ public class PlayerStats extends JPanel {
     static JLabel lblDate = new JLabel("Date: " + ld);
     static JLabel lblDistance = new JLabel("Distance: " + Inventory.Distance);
     static JLabel lblHealth = new JLabel("Health: " + Var.health);
-
+    static boolean ab = false;
     // date calculator for the GUI
     public static void SetLblDate() {
         lblDate.setText("Date: " + ld);
