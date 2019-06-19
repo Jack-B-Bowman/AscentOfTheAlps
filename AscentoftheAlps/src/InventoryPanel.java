@@ -2,6 +2,7 @@ import java.time.LocalDate;
 import java.time.Year;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class InventoryPanel extends JPanel {
 
@@ -10,7 +11,7 @@ public class InventoryPanel extends JPanel {
     static JLabel lblBullets = new JLabel("Bullets: " + Inventory.Bullets);
     static JLabel lblMedicine = new JLabel("Medicine: " + Inventory.Medicine);
     static JLabel lblRepairkits = new JLabel("Repair Kits: " + Inventory.Repairkits);
-
+    static boolean halhway = false;
     /**
      * Create the panel.
      */
@@ -39,18 +40,19 @@ public class InventoryPanel extends JPanel {
 
     public static void SetLblFood() {
 
-        lblFood.setText("Food:" + Inventory.foodSupply);
+        lblFood.setText("Food: " + (int) Inventory.foodSupply);
     }
 
     public static void SetLblElephants() {
-        lblElephants.setText("Elephants:" + Inventory.Elephants);
+        lblElephants.setText("Elephants: " + Inventory.Elephants);
     }
 
     //Aidcode
+    // setting labels on the inventory part of the gui
     public static void SetLblBullets() {
         lblBullets.setText("Bullets:" + Inventory.Bullets);
     }
-
+    
     public static void SetLblRepairkits() {
         lblRepairkits.setText("Medicine:" + Inventory.Medicine);
     }
@@ -58,8 +60,20 @@ public class InventoryPanel extends JPanel {
     public static void SetLblMedicine() {
         lblMedicine.setText("Repair Kits:" + Inventory.Repairkits);
     }
-    int i = 0;
-
+   
+    public static void halfway(){
+        if(Inventory.Distance < 1790 && !InventoryPanel.halhway){
+            JOptionPane.showMessageDialog(null, "Your Journey is Halfway Complete. Carry on brave one");
+        }
+    }
+    
+    public static void outOfFood(){
+        if(Inventory.foodSupply <= 0){
+            Inventory.foodSupply = 0;
+            Var.health--;
+            JOptionPane.showMessageDialog(null, "You ran out of food and thus have lost 1 health");
+        }
+    }
     public static void updateInventory() throws InterruptedException {
         SetLblFood();
         SetLblElephants();
@@ -67,5 +81,6 @@ public class InventoryPanel extends JPanel {
         SetLblRepairkits();
         SetLblMedicine();
         Thread.sleep(100);
+        //updates inventory by setting the labels and then waiting on call
     }
 }

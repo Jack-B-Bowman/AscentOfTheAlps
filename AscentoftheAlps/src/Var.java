@@ -9,7 +9,7 @@ public class Var {
     static Double distancePerDay = 0.0;
     static Double clothingUsage = 2.0;
     static Double tradeYeild = 1.5;
-    static Double health = 100.0;
+    static Double health = 5.0;
     static boolean hasChef = false;
     static boolean hasElephantTamer = false;
     static boolean hasMerchant = false;
@@ -18,9 +18,12 @@ public class Var {
     static boolean hasPreist = false;
     static boolean hasHunter = false;
     static String[] team = {"Merchant", "Chef", "Navigator", "Dog", "Priest", "Hunter", "Elephant Tamer"};
-
+    
+    //establishing the important variables and party members
+    //party members affect the above values which factors into inventory calculations
+    
     static public void setDisatancePerDay() {
-        distancePerDay = 20.0 * Inventory.Elephants;
+        distancePerDay = 20.0 * Inventory.Elephants + 2.0;
     }
 
     static public void hunter() {
@@ -82,12 +85,12 @@ public class Var {
     }
 
     static public void navigator() {
-        AscentoftheAlps.distance = AscentoftheAlps.distance * 0.85;
+        Inventory.Distance = Inventory.Distance * 0.85;
         hasNavigator = true;
     }
 
     static public void navigatorDie() {
-        AscentoftheAlps.distance = AscentoftheAlps.distance * 1.15;
+        Inventory.Distance = Inventory.Distance * 1.15;
         hasNavigator = false;
     }
 }

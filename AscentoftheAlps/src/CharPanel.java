@@ -16,15 +16,22 @@ public class CharPanel extends JPanel {
      *
      * @throws IOException
      */
+	String path = "/NPC.png";
+    JLabel CharIcon = new JLabel("New label");
+
     public CharPanel() throws IOException {
         setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
         setSize(299, 110);
         setLayout(null);
 
-        JLabel CharIcon = new JLabel("New label");
-        CharIcon.setBounds(0, 10, 90, 90);
+        CharIcon.setBounds(4, 10, 90, 90);
         add(CharIcon);
-        BufferedImage icon = ImageIO.read(this.getClass().getResource("/NPC.png"));
+        BufferedImage icon = ImageIO.read(this.getClass().getResourceAsStream(path));
         CharIcon.setIcon(new ImageIcon(icon));
     }
+    
+    public void setIcon(String s) throws IOException {
+    	path = s;
+        BufferedImage icon = ImageIO.read(this.getClass().getResourceAsStream(path));
+        CharIcon.setIcon(new ImageIcon(icon));    }
 }
