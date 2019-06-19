@@ -24,12 +24,14 @@ import javax.swing.JOptionPane;
 public class AscentoftheAlps {
     
     static boolean movement = false;
-    
-    public static void main(String[] args) throws LineUnavailableException, FileNotFoundException {
+    static PrintWriter outlogger;
+    static FileWriter f;
+    static File history;
+    public static void main(String[] args) throws LineUnavailableException, FileNotFoundException, IOException {
         GUI.main(null);
-        File history = new File ("history.txt");
-        PrintWriter outlogger = new PrintWriter(history);
-        
+        history = new File ("history.txt");
+        f = new FileWriter(history, true);
+        outlogger = new PrintWriter(f);
         //starts the GUI, starts logging
     }
 
@@ -42,6 +44,7 @@ public class AscentoftheAlps {
         for (int i = 0; i < 4; i++) {
             if (Var.health <= 0) {
                 JOptionPane.showMessageDialog(null, "You Have Died. Rome lives to see another day but you do not");
+                outlogger.close();
                 System.exit(0);
                 // taylor's player health system, below 0 is death
             }
@@ -67,6 +70,7 @@ public class AscentoftheAlps {
 
     public static void suicide() throws InterruptedException {
         Thread.sleep(1000);
+        outlogger.close();
         System.exit(0);
         // just wait and then exit when the suicide button is pressed
     }

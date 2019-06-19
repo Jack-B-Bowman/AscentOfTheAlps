@@ -26,7 +26,7 @@ public class Events extends JPanel {
         switch (chance) {
             case (1):
                 mutiny();
-                System.out.printf("Your party decided to mutiny and steal your elephants");
+                AscentoftheAlps.outlogger.printf("Your party decided to mutiny and steal your elephants");
                 break;
             case (2):
                 break;
@@ -34,7 +34,7 @@ public class Events extends JPanel {
                 break;
             case (4):
                 scam_1();
-                System.out.printf("You came across nigerian prince scammer in the desert. Surprisingly he wasn't even nigerian");
+                AscentoftheAlps.outlogger.printf("You came across nigerian prince scammer in the desert. Surprisingly he wasn't even nigerian");
                 break;
             case (5):
                 break;
@@ -44,7 +44,7 @@ public class Events extends JPanel {
                 break;
             case (8):
                 trade_2();
-                System.out.printf("You came across a trade opportunity (15 food for 1 medicine)");
+                AscentoftheAlps.outlogger.printf("You came across a trade opportunity (15 food for 1 medicine)");
                 break;
             case (9):
                 break;
@@ -52,7 +52,7 @@ public class Events extends JPanel {
                 break;
             case (11):
                 scam_2();
-                System.out.printf("You came across a suspicious merchant offering an exchange");
+                AscentoftheAlps.outlogger.printf("You came across a suspicious merchant offering an exchange");
                 break;
             case (12):
                 break;
@@ -60,13 +60,13 @@ public class Events extends JPanel {
                 break;
             case (14):
                 trade_1();
-                System.out.printf("You came across a trade opportunity (20 food for 1 repairkit)");
+                AscentoftheAlps.outlogger.printf("You came across a trade opportunity (20 food for 1 repairkit)");
                 break;
             case (15):
                 break;
             case (16):
                 breakDown();
-                System.out.printf("Your supply cart axle snapped under the strain");
+                AscentoftheAlps.outlogger.printf("Your supply cart axle snapped under the strain");
                 break;
             case (17):
                 break;
@@ -74,7 +74,7 @@ public class Events extends JPanel {
                 break;
             case (19):
                 eathuman();
-                System.out.printf("You came across a man alone in a field");
+                AscentoftheAlps.outlogger.printf("You came across a man alone in a field");
                 break;
             case (20):
                 break;
@@ -84,7 +84,7 @@ public class Events extends JPanel {
                 break;
             case (23):
                 breakDown();
-                System.out.printf("Your supply cart axle snapped under the strain");
+                AscentoftheAlps.outlogger.printf("Your supply cart axle snapped under the strain");
                 break;
             case (24):
                 break;
@@ -92,7 +92,7 @@ public class Events extends JPanel {
                 break;
             case (26):
                 steal();
-                System.out.printf("You encountered a tribal campsite at nightfall");
+                AscentoftheAlps.outlogger.printf("You encountered a tribal campsite at nightfall");
                 break;
             case (27):
                 break;
@@ -108,7 +108,7 @@ public class Events extends JPanel {
                 break;
             case (33):
                 findAppleTree();
-                System.out.printf("You found an Apple tree, gaining 25 food");
+                AscentoftheAlps.outlogger.printf("You found an Apple tree, gaining 25 food");
                 break;
             case (34):
                 break;
@@ -136,7 +136,7 @@ public class Events extends JPanel {
                 break;
             case (46):
                 findAppleTree();
-                System.out.printf("You found an Apple tree, gaining 25 food");
+                AscentoftheAlps.outlogger.printf("You found an Apple tree, gaining 25 food");
                 break;
             case (47):
                 break;
@@ -172,17 +172,17 @@ public class Events extends JPanel {
                 break;
             case (63):
                 findFigTree();
-                System.out.printf("You found a fig tree, gaining 0 food");
+                AscentoftheAlps.outlogger.printf("You found a fig tree, gaining 0 food");
                 break;
             case (64):
                 findAppleTree();
-                System.out.printf("You found an Apple tree, gaining 25 food");
+                AscentoftheAlps.outlogger.printf("You found an Apple tree, gaining 25 food");
                 break;
             case (65):
                 break;
             case (66):
                 findPearTree();
-                System.out.printf("You found a pear tree, gaining 25 food");
+                AscentoftheAlps.outlogger.printf("You found a pear tree, gaining 25 food");
                 break;
             case (67):
                 break;
@@ -202,7 +202,7 @@ public class Events extends JPanel {
                 break;
             case (75):
                 foodThief();
-                System.out.printf("A thief snuck into your camp and attempted to steal your food");
+                AscentoftheAlps.outlogger.printf("A thief snuck into your camp and attempted to steal your food");
                 break;
             case (76):
                 break;
@@ -210,7 +210,7 @@ public class Events extends JPanel {
                 break;
             case (78):
                 dysentary();
-                System.out.printf("You contracted dysentry from George RR Martin's shitty writing");
+                AscentoftheAlps.outlogger.printf("You contracted dysentry from George RR Martin's shitty writing");
                 break;
             case (79):
                 break;
@@ -218,51 +218,51 @@ public class Events extends JPanel {
                 break;
             case (81):
                 findAppleTree();
-                System.out.printf("You found an Apple tree, gaining 25 food");
+                AscentoftheAlps.outlogger.printf("You found an Apple tree, gaining 25 food");
                 break;
             case (82):
                 dysentary();
-                System.out.printf("You contracted dysentry from George RR Martin's shitty writing");
+                AscentoftheAlps.outlogger.printf("You contracted dysentry from George RR Martin's shitty writing");
                 break;
             case (83):
                 break;
             case (84):
                 findPearTree();
-                System.out.printf("You found a pear tree, gaining 25 food");
+                AscentoftheAlps.outlogger.printf("You found a pear tree, gaining 25 food");
                 break;
             case (85):
                 protest();
-                System.out.printf("You came across a Free Tibet protest in your travels");
+                AscentoftheAlps.outlogger.printf("You came across a Free Tibet protest in your travels");
                 break;
             case (86):
                 break;
             case (87):
                 foodThief();
-                System.out.printf("A thief snuck into your camp and attempted to steal your food");
+                AscentoftheAlps.outlogger.printf("A thief snuck into your camp and attempted to steal your food");
                 break;
             case (88):
                 trade_3();
-                System.out.printf("You came across a trade opportunity (15 food for 1 medicine)");
+                AscentoftheAlps.outlogger.printf("You came across a trade opportunity (15 food for 1 medicine)");
                 break;
             case (89):
                 huntingTrip();
-                System.out.printf("In your travels you discovered a potential hunting ground");
+                AscentoftheAlps.outlogger.printf("In your travels you discovered a potential hunting ground");
                 break;
             case (90):
                 break;
             case (91):
                 findFigTree();
-                System.out.printf("You found a fig tree, gaining 0 food");
+                AscentoftheAlps.outlogger.printf("You found a fig tree, gaining 0 food");
                 break;
             case (92):
                 break;
             case (93):
                 steal();
-                System.out.printf("You encountered a tribal campsite at nightfall");
+                AscentoftheAlps.outlogger.printf("You encountered a tribal campsite at nightfall");
                 break;
             case (94):
                 huntingTrip();
-                System.out.printf("In your travels you discovered a potential hunting ground");
+                AscentoftheAlps.outlogger.printf("In your travels you discovered a potential hunting ground");
                 break;
             case (95):
                 break;
@@ -274,7 +274,7 @@ public class Events extends JPanel {
                 break;
             case (99):
                 findPeachTree();
-                System.out.printf("You found a fig tree, gaining 30 food");
+                AscentoftheAlps.outlogger.printf("You found a fig tree, gaining 30 food");
                 break;
             case (100):
                 break;
