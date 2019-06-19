@@ -256,29 +256,32 @@ public class Events extends JPanel {
 
     //Taylor wrote the mutiny event
     public static void mutiny() {
-        JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Have Taken All of your Elephants");
-        Inventory.Elephants = 0.0;
+        if (!PlayerStats.ab) {
+            JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Have Taken All of your Elephants");
+            Inventory.Elephants = 0.0;
 
-        if (Var.hasChef) {
-            Var.chefDie();
-        }
-        if (Var.hasDog) {
-            Var.dogDie();
-        }
-        if (Var.hasElephantTamer) {
-            Var.elephantTamerDie();
-        }
-        if (Var.hasHunter) {
-            Var.hunterDie();
-        }
-        if (Var.hasMerchant) {
-            Var.merchantDie();
-        }
-        if (Var.hasNavigator) {
-            Var.navigatorDie();
-        }
-        if (Var.hasPreist) {
-            Var.presitDie();
+            if (Var.hasChef) {
+                Var.chefDie();
+            }
+            if (Var.hasDog) {
+                Var.dogDie();
+            }
+            if (Var.hasElephantTamer) {
+                Var.elephantTamerDie();
+            }
+            if (Var.hasHunter) {
+                Var.hunterDie();
+            }
+            if (Var.hasMerchant) {
+                Var.merchantDie();
+            }
+            if (Var.hasNavigator) {
+                Var.navigatorDie();
+            }
+            if (Var.hasPreist) {
+                Var.presitDie();
+            }
+        } else {
         }
     }
 
