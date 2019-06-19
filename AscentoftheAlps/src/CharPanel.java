@@ -16,7 +16,7 @@ public class CharPanel extends JPanel {
      *
      * @throws IOException
      */
-	String path = "/NPC.png";
+    String path = "/NPC.png";
     JLabel CharIcon = new JLabel("New label");
 
     public CharPanel() throws IOException {
@@ -29,9 +29,10 @@ public class CharPanel extends JPanel {
         BufferedImage icon = ImageIO.read(this.getClass().getResourceAsStream(path));
         CharIcon.setIcon(new ImageIcon(icon));
     }
-    
+
     public void setIcon(String s) throws IOException {
-    	path = s;
+        path = s;
         BufferedImage icon = ImageIO.read(this.getClass().getResourceAsStream(path));
-        CharIcon.setIcon(new ImageIcon(icon));    }
+        CharIcon.setIcon(new ImageIcon(icon));
+    }
 }

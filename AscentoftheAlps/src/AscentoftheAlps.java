@@ -42,6 +42,7 @@ public class AscentoftheAlps {
                 System.exit(0);
                 // taylor's player health system, below 0 is death
             }
+            InventoryPanel.isDone();
             InventoryPanel.halfway();
             Var.setDisatancePerDay();
             System.out.println(Var.distancePerDay);

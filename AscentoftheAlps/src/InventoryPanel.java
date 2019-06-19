@@ -1,3 +1,4 @@
+
 import java.time.LocalDate;
 import java.time.Year;
 import javax.swing.JPanel;
@@ -12,6 +13,8 @@ public class InventoryPanel extends JPanel {
     static JLabel lblMedicine = new JLabel("Medicine: " + Inventory.Medicine);
     static JLabel lblRepairkits = new JLabel("Repair Kits: " + Inventory.Repairkits);
     static boolean halhway = false;
+    static boolean done = false;
+
     /**
      * Create the panel.
      */
@@ -52,7 +55,7 @@ public class InventoryPanel extends JPanel {
     public static void SetLblBullets() {
         lblBullets.setText("Bullets:" + Inventory.Bullets);
     }
-    
+
     public static void SetLblRepairkits() {
         lblRepairkits.setText("Medicine:" + Inventory.Medicine);
     }
@@ -60,20 +63,30 @@ public class InventoryPanel extends JPanel {
     public static void SetLblMedicine() {
         lblMedicine.setText("Repair Kits:" + Inventory.Repairkits);
     }
-   
-    public static void halfway(){
-        if(Inventory.Distance < 1790 && !InventoryPanel.halhway){
+
+    public static void halfway() {
+        if (Inventory.Distance < 1790 && !InventoryPanel.halhway) {
             JOptionPane.showMessageDialog(null, "Your Journey is Halfway Complete. Carry on brave one");
+            InventoryPanel.halhway = true;
         }
     }
-    
-    public static void outOfFood(){
-        if(Inventory.foodSupply <= 0){
+
+    public static void isDone() {
+        if (Inventory.Distance <= 0 && !InventoryPanel.done) {
+            JOptionPane.showMessageDialog(null, "Your Journey is Complete. How are a strategic genius and deserve the highest of praise. Godspeed");
+            InventoryPanel.done = true;
+            System.exit(0);
+        }
+    }
+
+    public static void outOfFood() {
+        if (Inventory.foodSupply <= 0) {
             Inventory.foodSupply = 0;
             Var.health--;
             JOptionPane.showMessageDialog(null, "You ran out of food and thus have lost 1 health");
         }
     }
+
     public static void updateInventory() throws InterruptedException {
         SetLblFood();
         SetLblElephants();

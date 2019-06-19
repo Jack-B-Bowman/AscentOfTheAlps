@@ -11,7 +11,7 @@ import javax.swing.JLabel;
  */
 public class PlayerStats extends JPanel {
 
-    static int dayOfYear = 308;
+    static int dayOfYear = 1;
     static Year y = Year.of(-218);
     static LocalDate ld = y.atDay(dayOfYear);
     static JLabel lblDate = new JLabel("Date: " + ld);
@@ -23,10 +23,10 @@ public class PlayerStats extends JPanel {
         lblDate.setText("Date: " + ld);
     }
 
-    public static void setHealthLbl(){
+    public static void setHealthLbl() {
         lblHealth.setText("Health: " + Var.health);
     }
-    
+
     public static void SetLblDistance() {
 
         lblDistance.setText("Distance: " + Inventory.Distance);

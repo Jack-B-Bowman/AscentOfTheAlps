@@ -116,8 +116,21 @@ public class GUI {
             }
         });
 
-        JButton btnSave = new JButton("Save");
-        btnSave.setBounds(449, 241, 87, 23);
+        final JButton btnSave = new JButton("Beg For Food");
+        btnSave.setBounds(449, 241, 174, 23);
+        btnSave.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+                if (arg0.getSource() == btnSave) {
+                    if (Inventory.foodSupply < 20) {
+                        JOptionPane.showMessageDialog(null, "Your begging is answered by some kind mountain dwellers");
+                        Inventory.foodSupply = Inventory.foodSupply + 10;
+                        btnSave.disable();
+                    }
+                    JOptionPane.showMessageDialog(null, "No one but the wind can hear your cries");
+                }
+            }
+        });
 
         final JButton btnCommitDie = new JButton("Suicide");
         btnCommitDie.addActionListener(new ActionListener() {

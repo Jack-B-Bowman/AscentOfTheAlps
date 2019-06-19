@@ -18,10 +18,9 @@ public class Var {
     static boolean hasPreist = false;
     static boolean hasHunter = false;
     static String[] team = {"Merchant", "Chef", "Navigator", "Dog", "Priest", "Hunter", "Elephant Tamer"};
-    
+
     //establishing the important variables and party members
     //party members affect the above values which factors into inventory calculations
-    
     static public void setDisatancePerDay() {
         distancePerDay = 20.0 * Inventory.Elephants + 2.0;
     }

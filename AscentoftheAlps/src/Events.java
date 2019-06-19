@@ -6,7 +6,8 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Taylor Conn I built dis with the guidence and psudocode of Aidan and Jack
+ * @author Taylor Conn I built dis with the guidence and psudocode of Aidan and
+ * Jack
  */
 //Aidan note
 //it's not pseudocode taylor fuck you I was working without knowledge of the variables or systems
@@ -19,9 +20,9 @@ public class Events extends JPanel {
     //Taylor made the switch statement architecture
     public static void runEvents() {
         int chance = actOfGod.nextInt(100) + 1;
-       //int chance = 19; //test case for hunting event
-       // switch statement on a random number, goto case and then break afterwards
-       //program is frozen until event is complete
+        //int chance = 19; //test case for hunting event
+        // switch statement on a random number, goto case and then break afterwards
+        //program is frozen until event is complete
         switch (chance) {
             case (1):
                 mutiny();
@@ -59,6 +60,7 @@ public class Events extends JPanel {
             case (15):
                 break;
             case (16):
+                breakDown();
                 break;
             case (17):
                 break;
@@ -74,6 +76,7 @@ public class Events extends JPanel {
             case (22):
                 break;
             case (23):
+                breakDown();
                 break;
             case (24):
                 break;
@@ -157,7 +160,7 @@ public class Events extends JPanel {
             case (62):
                 break;
             case (63):
-                 findFigTree();
+                findFigTree();
                 break;
             case (64):
                 findAppleTree();
@@ -191,6 +194,7 @@ public class Events extends JPanel {
             case (77):
                 break;
             case (78):
+                dysentary();
                 break;
             case (79):
                 break;
@@ -200,6 +204,7 @@ public class Events extends JPanel {
                 findAppleTree();
                 break;
             case (82):
+                dysentary();
                 break;
             case (83):
                 break;
@@ -207,6 +212,7 @@ public class Events extends JPanel {
                 findPearTree();
                 break;
             case (85):
+                protest();
                 break;
             case (86):
                 break;
@@ -222,11 +228,12 @@ public class Events extends JPanel {
             case (90):
                 break;
             case (91):
-                 findFigTree();
+                findFigTree();
                 break;
             case (92):
                 break;
             case (93):
+                steal();
                 break;
             case (94):
                 huntingTrip();
@@ -246,7 +253,7 @@ public class Events extends JPanel {
                 break;
         }
     }
-    
+
     //Taylor wrote the mutiny event
     public static void mutiny() {
         JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Have Taken All of your Elephants");
@@ -274,7 +281,7 @@ public class Events extends JPanel {
             Var.presitDie();
         }
     }
-    
+
     //Aidan wrote the scam event
     public static void scam_1() {
         int response = JOptionPane.showConfirmDialog(null, "A suspicious man offers you 200 food if you wire 50 food to the bank of nigeria to confirm the transaction. Take the deal?",
@@ -296,6 +303,7 @@ public class Events extends JPanel {
                 break;
         }
     }
+
     // aidan here
     public static void scam_2() {
         int response = JOptionPane.showConfirmDialog(null, "A happy merchant approaches and offers to trade 5 medicine for 30 food at 15% daily compounding interest. Do you accept?",
@@ -319,6 +327,7 @@ public class Events extends JPanel {
                 break;
         }
     }
+
     // also here
     public static void trade_1() {
         int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 20 food for a repair kit?",
@@ -342,6 +351,7 @@ public class Events extends JPanel {
                 break;
         }
     }
+
     //and here
     public static void trade_2() {
         int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 15 food for 1 medicine?",
@@ -364,6 +374,7 @@ public class Events extends JPanel {
                 break;
         }
     }
+
     // and this one
     public static void trade_3() {
         int response = JOptionPane.showConfirmDialog(null, "You come across a friendly tribe offering trade. Trade 15 food for 1 medicine?",
@@ -386,26 +397,31 @@ public class Events extends JPanel {
                 break;
         }
     }
+
     // Aidan did this event
     public static void findAppleTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered an apple tree. After some time spent picking you depart with 25 food");
         Inventory.foodSupply = Inventory.foodSupply + 25;
     }
+
     // and this one
     public static void findPearTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a pear tree. After some time spent picking you depart with 25 food");
         Inventory.foodSupply = Inventory.foodSupply + 25;
     }
+
     // and this one
     public static void findFigTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a fig tree. After some time spent picking you depart without any food because figs are not food they are god’s idea of a joke");
         Inventory.foodSupply = Inventory.foodSupply + 0;
     }
+
     // and this one
     public static void findPeachTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a peach tree. After some time spent picking you depart with 30 food");
         Inventory.foodSupply = Inventory.foodSupply + 30;
     }
+
     // and this one
     public static void theifInTheNight() {
         JOptionPane.showMessageDialog(null, "While you were asleep, a thief snuck into your camp and attempted to steal one of your elephants!");
@@ -416,6 +432,7 @@ public class Events extends JPanel {
             Inventory.Elephants = Inventory.Elephants - 1;
         }
     }
+
     // and this one
     public static void huntingTrip() {
         JOptionPane.showMessageDialog(null, "On your travels, you come across what looks like a potentially good hunting grounds.");
@@ -430,8 +447,9 @@ public class Events extends JPanel {
         } else {
             JOptionPane.showMessageDialog(null, "You have an insufficient amount of bullets to hunt with any hope of catching anything");
         }
-    //if you have a hunter and bullets, gain 100 food for 10 bullets else gain 40 food and waste 15 bullets
+        //if you have a hunter and bullets, gain 100 food for 10 bullets else gain 40 food and waste 15 bullets
     }
+
     // and this one
     public static void foodThief() {
         JOptionPane.showMessageDialog(null, "While you were asleep, a thief snuck into your camp and attempted to steal your food!");
@@ -443,6 +461,7 @@ public class Events extends JPanel {
             Inventory.foodSupply = Inventory.foodSupply - 30;
         }
     }
+
     // I also made this one
     public static void eathuman() {
         int response = JOptionPane.showConfirmDialog(null, "You come across a friendly man in an empty field. Do you wish to eat him?",
@@ -462,6 +481,7 @@ public class Events extends JPanel {
                 break;
         }
     }
+
     // and this one
     public static void steal() {
         int response = JOptionPane.showConfirmDialog(null, "As night falls, you come across a tribal campsite. Will you sneak in under darkness to try and steal supplies?",
@@ -481,6 +501,58 @@ public class Events extends JPanel {
                 break;
             default:
                 break;
+        }
+    }
+
+    //Taylor
+    public static void dysentary() {
+        JOptionPane.showMessageDialog(null, "Due to drinking from a muddy puddle you have contracted dysentary");
+        if (Inventory.Medicine >= 1) {
+            Inventory.Medicine--;
+            JOptionPane.showMessageDialog(null, "Luckily you have access to modern medicine so you continue on your journey");
+        } else {
+            Var.health--;
+            JOptionPane.showMessageDialog(null, "You attempt the only cure you know which is performing a raindance. It is highly ineffective and you lose 1 health");
+        }
+    }
+
+    //Taylor
+    public static void protest() {
+        int response = JOptionPane.showConfirmDialog(null, "While travelling through a city you come across a protest. It looks like it's about to become a riot. Join in?",
+                null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        switch (response) {
+            case JOptionPane.NO_OPTION:
+                JOptionPane.showMessageDialog(null, "You decide to pass up the opportunity and protesters throw mad at you. You contract dysentary");
+                if (Inventory.Medicine >= 1) {
+                    Inventory.Medicine--;
+                    JOptionPane.showMessageDialog(null, "Luckily you have access to modern medicine so you continue on your journey");
+                } else {
+                    Var.health--;
+                    JOptionPane.showMessageDialog(null, "You attempt the only cure you know which is performing a raindance. It is highly ineffective and you lose 1 health");
+                    break;
+                }
+                break;
+            case JOptionPane.YES_OPTION:
+                JOptionPane.showMessageDialog(null, "Your involvement changed the tide of the protest and the protesters show their graditude by replenishing your inventory");
+                Inventory.Bullets = Inventory.Bullets + 20;
+                Inventory.Repairkits = Inventory.Repairkits + 3;
+                Inventory.foodSupply = Inventory.foodSupply + 30;
+            case JOptionPane.CLOSED_OPTION:
+                break;
+            default:
+                break;
+        }
+    }
+
+    //Taylor
+    public static void breakDown() {
+        JOptionPane.showMessageDialog(null, "Your inventory cart loses a wheel");
+        if (Inventory.Repairkits >= 1) {
+            Inventory.Repairkits--;
+            JOptionPane.showMessageDialog(null, "You used a repair kit to fix the cart and you are back on your way");
+        } else {
+            Var.distancePerDay = Var.distancePerDay - 1;
+            JOptionPane.showMessageDialog(null, "This slows down your daily progression by 1 km per day");
         }
     }
 }
