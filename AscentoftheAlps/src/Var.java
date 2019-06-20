@@ -5,6 +5,7 @@
  */
 public class Var {
 
+    //all the characters a user could select and the variables their selection would modify
     static Double foodConsumption = 2.0;
     static Double distancePerDay = 0.0;
     static Double clothingUsage = 2.0;
@@ -21,6 +22,7 @@ public class Var {
 
     //establishing the important variables and party members
     //party members affect the above values which factors into inventory calculations
+    //these are all the modify and unmodify methods
     static public void setDisatancePerDay() {
         distancePerDay = 20.0 * Inventory.Elephants + 2.0;
     }

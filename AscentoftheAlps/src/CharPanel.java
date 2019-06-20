@@ -19,6 +19,7 @@ public class CharPanel extends JPanel {
     String path = "/NPC.png";
     JLabel CharIcon = new JLabel("New label");
 
+    //defines what the character panel will look like
     public CharPanel() throws IOException {
         setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
         setSize(299, 110);
@@ -30,6 +31,7 @@ public class CharPanel extends JPanel {
         CharIcon.setIcon(new ImageIcon(icon));
     }
 
+    //sets the character image
     public void setIcon(String s) throws IOException {
         path = s;
         BufferedImage icon = ImageIO.read(this.getClass().getResourceAsStream(path));

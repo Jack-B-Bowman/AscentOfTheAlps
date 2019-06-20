@@ -10,9 +10,9 @@ import javax.swing.JPanel;
  * Jack
  */
 //Aidan note
-//it's not pseudocode taylor fuck you I was working without knowledge of the variables or systems
+//it's not pseudocode taylor. I was working without knowledge of the variables or systems
 //the only problem with it was not having the crew interactions or public static void calls, the popups and inventory interactions were fine
-//lol aidan get cucked
+
 public class Events extends JPanel {
 
     static Random actOfGod = new Random();
@@ -20,7 +20,7 @@ public class Events extends JPanel {
     //Taylor made the switch statement architecture
     public static void runEvents() {
         int chance = actOfGod.nextInt(100) + 1;
-        //int chance = 19; //test case for hunting event
+        
         // switch statement on a random number, goto case and then break afterwards
         //program is frozen until event is complete
         switch (chance) {
@@ -282,6 +282,7 @@ public class Events extends JPanel {
     }
 
     //Taylor wrote the mutiny event
+    //all of the chosen character stat modifyiers are reversed and you lose all your elephants
     public static void mutiny() {
         if (!PlayerStats.ab) {
             JOptionPane.showMessageDialog(null, "Your Crew Has Abandoned You And Have Taken All of your Elephants");
@@ -314,6 +315,7 @@ public class Events extends JPanel {
     }
 
     //Aidan wrote the scam event
+    //bad trade
     public static void scam_1() {
         int response = JOptionPane.showConfirmDialog(null, "A suspicious man offers you 200 food if you wire 50 food to the bank of nigeria to confirm the transaction. Take the deal?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -336,6 +338,7 @@ public class Events extends JPanel {
     }
 
     // aidan here
+    // bad trade
     public static void scam_2() {
         int response = JOptionPane.showConfirmDialog(null, "A happy merchant approaches and offers to trade 5 medicine for 30 food at 15% daily compounding interest. Do you accept?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -430,30 +433,35 @@ public class Events extends JPanel {
     }
 
     // Aidan did this event
+    //get food
     public static void findAppleTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered an apple tree. After some time spent picking you depart with 25 food");
         Inventory.foodSupply = Inventory.foodSupply + 25;
     }
 
     // and this one
+    //get food
     public static void findPearTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a pear tree. After some time spent picking you depart with 25 food");
         Inventory.foodSupply = Inventory.foodSupply + 25;
     }
 
     // and this one
+    //get no food
     public static void findFigTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a fig tree. After some time spent picking you depart without any food because figs are not food they are god’s idea of a joke");
         Inventory.foodSupply = Inventory.foodSupply + 0;
     }
 
     // and this one
+    //get food
     public static void findPeachTree() {
         JOptionPane.showMessageDialog(null, "On your journey you discovered a peach tree. After some time spent picking you depart with 30 food");
         Inventory.foodSupply = Inventory.foodSupply + 30;
     }
 
     // and this one
+    //Someone tries to steal from you and takes an elephant unless you have a dog
     public static void theifInTheNight() {
         JOptionPane.showMessageDialog(null, "While you were asleep, a thief snuck into your camp and attempted to steal one of your elephants!");
         if (Var.hasDog) {
@@ -465,6 +473,7 @@ public class Events extends JPanel {
     }
 
     // and this one
+    //You go hunting. Results depend on if you have a hunter and how many bullets you have
     public static void huntingTrip() {
         JOptionPane.showMessageDialog(null, "On your travels, you come across what looks like a potentially good hunting grounds.");
         if (Var.hasHunter && Inventory.Bullets >= 10) {
@@ -482,6 +491,7 @@ public class Events extends JPanel {
     }
 
     // and this one
+    //Someone steals from you unless you have a dog
     public static void foodThief() {
         JOptionPane.showMessageDialog(null, "While you were asleep, a thief snuck into your camp and attempted to steal your food!");
         if (Var.hasDog) {
@@ -494,6 +504,7 @@ public class Events extends JPanel {
     }
 
     // I also made this one
+    // you choose wheater you wish to eat a friendly man
     public static void eathuman() {
         int response = JOptionPane.showConfirmDialog(null, "You come across a friendly man in an empty field. Do you wish to eat him?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -514,6 +525,7 @@ public class Events extends JPanel {
     }
 
     // and this one
+    //you are presented with the option to steal from a rival tribe or not
     public static void steal() {
         int response = JOptionPane.showConfirmDialog(null, "As night falls, you come across a tribal campsite. Will you sneak in under darkness to try and steal supplies?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -535,7 +547,7 @@ public class Events extends JPanel {
         }
     }
 
-    //Taylor
+    //Taylor if you have medicine your keep going like normal. Otherwise you lose one health
     public static void dysentary() {
         JOptionPane.showMessageDialog(null, "Due to drinking from a muddy puddle you have contracted dysentary");
         if (Inventory.Medicine >= 1) {
@@ -547,7 +559,7 @@ public class Events extends JPanel {
         }
     }
 
-    //Taylor
+    //Taylor If you join the protest you get items added to your inventory. If you refuse you get dysentary
     public static void protest() {
         int response = JOptionPane.showConfirmDialog(null, "While travelling through a city you come across a protest. It looks like it's about to become a riot. Join in?",
                 null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -575,7 +587,7 @@ public class Events extends JPanel {
         }
     }
 
-    //Taylor
+    //Taylor This event slows down your progression unless you have a repair kit
     public static void breakDown() {
         JOptionPane.showMessageDialog(null, "Your inventory cart loses a wheel");
         if (Inventory.Repairkits >= 1) {

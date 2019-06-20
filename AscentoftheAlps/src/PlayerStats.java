@@ -11,13 +11,20 @@ import javax.swing.JLabel;
  */
 public class PlayerStats extends JPanel {
 
+    //these are you the date in game
     static int dayOfYear = 1;
     static Year y = Year.of(-218);
     static LocalDate ld = y.atDay(dayOfYear);
     static JLabel lblDate = new JLabel("Date: " + ld);
+    
+    //lbls for the distanc ean dhealth to be displayed
     static JLabel lblDistance = new JLabel("Distance: " + Inventory.Distance);
     static JLabel lblHealth = new JLabel("Health: " + Var.health);
+    
+    //boolean for if you are abandonned so you are not abbandonned again
     static boolean ab = false;
+    
+    
     // date calculator for the GUI
     public static void SetLblDate() {
         lblDate.setText("Date: " + ld);
@@ -32,6 +39,7 @@ public class PlayerStats extends JPanel {
         lblDistance.setText("Distance: " + Inventory.Distance);
     }
 
+    //updates all the label together
     public static void callTogether() throws InterruptedException {
         SetLblDistance();
         SetLblDate();
@@ -39,6 +47,7 @@ public class PlayerStats extends JPanel {
         // call and update both the distance label and date label
     }
 
+    //makes the panel design and labels
     public PlayerStats() {
         setBounds(20, 20, 800, 250);
         setLayout(null);

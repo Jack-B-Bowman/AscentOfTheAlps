@@ -156,7 +156,7 @@ public class GUI {
         btnCommitDie.setBounds(449, 270, 87, 23);
         
         // if the guide button is clicked
-        JButton btnGuide = new JButton("Guide");
+        final JButton btnGuide = new JButton("Guide");
         btnGuide.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent arg0) {
                     if (arg0.getSource() == btnGuide) {

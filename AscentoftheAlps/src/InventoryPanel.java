@@ -6,17 +6,19 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class InventoryPanel extends JPanel {
-
+//all the labels that will exist on the panel in the gui
     static JLabel lblFood = new JLabel("Food: " + Inventory.foodSupply);
     static JLabel lblElephants = new JLabel("Elephants: " + Inventory.Elephants);
     static JLabel lblBullets = new JLabel("Bullets: " + Inventory.Bullets);
     static JLabel lblMedicine = new JLabel("Medicine: " + Inventory.Medicine);
     static JLabel lblRepairkits = new JLabel("Repair Kits: " + Inventory.Repairkits);
+    
+    //distance checkpoit booleans
     static boolean halhway = false;
     static boolean done = false;
 
     /**
-     * Create the panel.
+     * Create the panel and the labels
      */
     public InventoryPanel() {
         setBounds(0, 0, 785, 215);
@@ -64,6 +66,8 @@ public class InventoryPanel extends JPanel {
         lblMedicine.setText("Repair Kits:" + Inventory.Repairkits);
     }
 
+    //checks if done and halfway and displays a message of encouragement
+    
     public static void halfway() {
         if (Inventory.Distance < 1790 && !InventoryPanel.halhway) {
             JOptionPane.showMessageDialog(null, "Your Journey is Halfway Complete. Carry on brave one");
@@ -80,6 +84,7 @@ public class InventoryPanel extends JPanel {
         }
     }
 
+    //checks your food and modiys your health if you have none
     public static void outOfFood() {
         if (Inventory.foodSupply <= 0) {
             Inventory.foodSupply = 0;
@@ -88,6 +93,7 @@ public class InventoryPanel extends JPanel {
         }
     }
 
+    //updates all the labels
     public static void updateInventory() throws InterruptedException {
         SetLblFood();
         SetLblElephants();
